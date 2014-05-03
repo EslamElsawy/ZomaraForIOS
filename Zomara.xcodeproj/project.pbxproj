@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30C949AC1829561000B17666 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C949AB1829561000B17666 /* FacebookSDK.framework */; };
+		30C949AE1829561800B17666 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C949AD1829561800B17666 /* Parse.framework */; };
+		522F2F14191508E600A96B7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 522F2EFD191508E600A96B7C /* InfoPlist.strings */; };
+		522F2F15191508E600A96B7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F2F00191508E600A96B7C /* AppDelegate.m */; };
+		522F2F16191508E600A96B7C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F01191508E600A96B7C /* Default-568h@2x.png */; };
+		522F2F17191508E600A96B7C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F02191508E600A96B7C /* Default.png */; };
+		522F2F18191508E600A96B7C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F03191508E600A96B7C /* Default@2x.png */; };
+		522F2F19191508E600A96B7C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F04191508E600A96B7C /* Icon.png */; };
+		522F2F1A191508E600A96B7C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F05191508E600A96B7C /* Icon@2x.png */; };
+		522F2F1B191508E600A96B7C /* login-button-small-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F06191508E600A96B7C /* login-button-small-pressed.png */; };
+		522F2F1C191508E600A96B7C /* login-button-small-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F07191508E600A96B7C /* login-button-small-pressed@2x.png */; };
+		522F2F1D191508E600A96B7C /* login-button-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F08191508E600A96B7C /* login-button-small.png */; };
+		522F2F1E191508E600A96B7C /* login-button-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F09191508E600A96B7C /* login-button-small@2x.png */; };
+		522F2F1F191508E600A96B7C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F2F0B191508E600A96B7C /* LoginViewController.m */; };
+		522F2F20191508E600A96B7C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F0C191508E600A96B7C /* LoginViewController.xib */; };
+		522F2F21191508E600A96B7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F2F0D191508E600A96B7C /* main.m */; };
+		522F2F22191508E600A96B7C /* TableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F0E191508E600A96B7C /* TableHeaderView.xib */; };
+		522F2F23191508E600A96B7C /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F2F10191508E600A96B7C /* UserDetailsViewController.m */; };
+		522F2F24191508E600A96B7C /* UserDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F11191508E600A96B7C /* UserDetailsViewController.xib */; };
+		522F2F25191508E600A96B7C /* Zomara-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F12191508E600A96B7C /* Zomara-Info.plist */; };
+		6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D10F48216DD68E000690A0F /* CoreLocation.framework */; };
+		C425016D161BBAE400474BCD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4250169161BBAE400474BCD /* StoreKit.framework */; };
+		C4250170161BBAEE00474BCD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C425016F161BBAEE00474BCD /* libz.dylib */; };
+		D4DA79EF14D3345A0055F672 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA79EE14D3345A0055F672 /* UIKit.framework */; };
+		D4DA79F114D3345A0055F672 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA79F014D3345A0055F672 /* Foundation.framework */; };
+		D4DA79F314D3345A0055F672 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA79F214D3345A0055F672 /* CoreGraphics.framework */; };
+		D4DA7A0E14D334F30055F672 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0714D334F30055F672 /* AudioToolbox.framework */; };
+		D4DA7A0F14D334F30055F672 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0814D334F30055F672 /* CFNetwork.framework */; };
+		D4DA7A1114D334F30055F672 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0A14D334F30055F672 /* MobileCoreServices.framework */; };
+		D4DA7A1214D334F30055F672 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0B14D334F30055F672 /* QuartzCore.framework */; };
+		D4DA7A1314D334F30055F672 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0C14D334F30055F672 /* Security.framework */; };
+		D4DA7A1414D334F30055F672 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0D14D334F30055F672 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		30C949AB1829561000B17666 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		30C949AD1829561800B17666 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		522F2EFE191508E600A96B7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		522F2EFF191508E600A96B7C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Zomara/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		522F2F00191508E600A96B7C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Zomara/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		522F2F01191508E600A96B7C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Zomara/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		522F2F02191508E600A96B7C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Zomara/Default.png; sourceTree = SOURCE_ROOT; };
+		522F2F03191508E600A96B7C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Zomara/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		522F2F04191508E600A96B7C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Zomara/Icon.png; sourceTree = SOURCE_ROOT; };
+		522F2F05191508E600A96B7C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Zomara/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		522F2F06191508E600A96B7C /* login-button-small-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small-pressed.png"; path = "Zomara/login-button-small-pressed.png"; sourceTree = SOURCE_ROOT; };
+		522F2F07191508E600A96B7C /* login-button-small-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small-pressed@2x.png"; path = "Zomara/login-button-small-pressed@2x.png"; sourceTree = SOURCE_ROOT; };
+		522F2F08191508E600A96B7C /* login-button-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small.png"; path = "Zomara/login-button-small.png"; sourceTree = SOURCE_ROOT; };
+		522F2F09191508E600A96B7C /* login-button-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small@2x.png"; path = "Zomara/login-button-small@2x.png"; sourceTree = SOURCE_ROOT; };
+		522F2F0A191508E600A96B7C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Zomara/LoginViewController.h; sourceTree = SOURCE_ROOT; };
+		522F2F0B191508E600A96B7C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Zomara/LoginViewController.m; sourceTree = SOURCE_ROOT; };
+		522F2F0C191508E600A96B7C /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Zomara/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
+		522F2F0D191508E600A96B7C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Zomara/main.m; sourceTree = SOURCE_ROOT; };
+		522F2F0E191508E600A96B7C /* TableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableHeaderView.xib; path = Zomara/TableHeaderView.xib; sourceTree = SOURCE_ROOT; };
+		522F2F0F191508E600A96B7C /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailsViewController.h; path = Zomara/UserDetailsViewController.h; sourceTree = SOURCE_ROOT; };
+		522F2F10191508E600A96B7C /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailsViewController.m; path = Zomara/UserDetailsViewController.m; sourceTree = SOURCE_ROOT; };
+		522F2F11191508E600A96B7C /* UserDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserDetailsViewController.xib; path = Zomara/UserDetailsViewController.xib; sourceTree = SOURCE_ROOT; };
+		522F2F12191508E600A96B7C /* Zomara-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Zomara-Info.plist"; path = "Zomara/Zomara-Info.plist"; sourceTree = SOURCE_ROOT; };
+		522F2F13191508E600A96B7C /* Zomara-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Zomara-Prefix.pch"; path = "Zomara/Zomara-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		6D10F48216DD68E000690A0F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C4250169161BBAE400474BCD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C425016F161BBAEE00474BCD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D4DA79EA14D3345A0055F672 /* Zomara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zomara.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4DA79EE14D3345A0055F672 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D4DA79F014D3345A0055F672 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D4DA79F214D3345A0055F672 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D4DA7A0714D334F30055F672 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D4DA7A0814D334F30055F672 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D4DA7A0A14D334F30055F672 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D4DA7A0B14D334F30055F672 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D4DA7A0C14D334F30055F672 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D4DA7A0D14D334F30055F672 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4DA79E714D3345A0055F672 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C425016D161BBAE400474BCD /* StoreKit.framework in Frameworks */,
+				6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */,
+				C4250170161BBAEE00474BCD /* libz.dylib in Frameworks */,
+				D4DA7A0E14D334F30055F672 /* AudioToolbox.framework in Frameworks */,
+				D4DA7A0F14D334F30055F672 /* CFNetwork.framework in Frameworks */,
+				D4DA7A1114D334F30055F672 /* MobileCoreServices.framework in Frameworks */,
+				D4DA7A1214D334F30055F672 /* QuartzCore.framework in Frameworks */,
+				D4DA7A1314D334F30055F672 /* Security.framework in Frameworks */,
+				30C949AC1829561000B17666 /* FacebookSDK.framework in Frameworks */,
+				D4DA7A1414D334F30055F672 /* SystemConfiguration.framework in Frameworks */,
+				30C949AE1829561800B17666 /* Parse.framework in Frameworks */,
+				D4DA79EF14D3345A0055F672 /* UIKit.framework in Frameworks */,
+				D4DA79F114D3345A0055F672 /* Foundation.framework in Frameworks */,
+				D4DA79F314D3345A0055F672 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		522F2EFC191508E600A96B7C /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				522F2EFD191508E600A96B7C /* InfoPlist.strings */,
+			);
+			name = en.lproj;
+			path = Zomara/en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		D4DA79DF14D3345A0055F672 = {
+			isa = PBXGroup;
+			children = (
+				D4DA79F414D3345A0055F672 /* Zomara */,
+				D4DA79ED14D3345A0055F672 /* Frameworks */,
+				D4DA79EB14D3345A0055F672 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4DA79EB14D3345A0055F672 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4DA79EA14D3345A0055F672 /* Zomara.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4DA79ED14D3345A0055F672 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30C949AD1829561800B17666 /* Parse.framework */,
+				30C949AB1829561000B17666 /* FacebookSDK.framework */,
+				6D10F48216DD68E000690A0F /* CoreLocation.framework */,
+				D4DA7A0714D334F30055F672 /* AudioToolbox.framework */,
+				D4DA7A0814D334F30055F672 /* CFNetwork.framework */,
+				D4DA79F214D3345A0055F672 /* CoreGraphics.framework */,
+				D4DA79F014D3345A0055F672 /* Foundation.framework */,
+				C425016F161BBAEE00474BCD /* libz.dylib */,
+				D4DA7A0A14D334F30055F672 /* MobileCoreServices.framework */,
+				D4DA7A0B14D334F30055F672 /* QuartzCore.framework */,
+				D4DA7A0C14D334F30055F672 /* Security.framework */,
+				C4250169161BBAE400474BCD /* StoreKit.framework */,
+				D4DA7A0D14D334F30055F672 /* SystemConfiguration.framework */,
+				D4DA79EE14D3345A0055F672 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4DA79F414D3345A0055F672 /* Zomara */ = {
+			isa = PBXGroup;
+			children = (
+				522F2EFC191508E600A96B7C /* en.lproj */,
+				522F2EFF191508E600A96B7C /* AppDelegate.h */,
+				522F2F00191508E600A96B7C /* AppDelegate.m */,
+				522F2F01191508E600A96B7C /* Default-568h@2x.png */,
+				522F2F02191508E600A96B7C /* Default.png */,
+				522F2F03191508E600A96B7C /* Default@2x.png */,
+				522F2F04191508E600A96B7C /* Icon.png */,
+				522F2F05191508E600A96B7C /* Icon@2x.png */,
+				522F2F06191508E600A96B7C /* login-button-small-pressed.png */,
+				522F2F07191508E600A96B7C /* login-button-small-pressed@2x.png */,
+				522F2F08191508E600A96B7C /* login-button-small.png */,
+				522F2F09191508E600A96B7C /* login-button-small@2x.png */,
+				522F2F0A191508E600A96B7C /* LoginViewController.h */,
+				522F2F0B191508E600A96B7C /* LoginViewController.m */,
+				522F2F0C191508E600A96B7C /* LoginViewController.xib */,
+				522F2F0E191508E600A96B7C /* TableHeaderView.xib */,
+				522F2F0F191508E600A96B7C /* UserDetailsViewController.h */,
+				522F2F10191508E600A96B7C /* UserDetailsViewController.m */,
+				522F2F11191508E600A96B7C /* UserDetailsViewController.xib */,
+				D4DA79F514D3345A0055F672 /* Supporting Files */,
+			);
+			name = Zomara;
+			path = IntegratingFacebookTutorial;
+			sourceTree = "<group>";
+		};
+		D4DA79F514D3345A0055F672 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				522F2F0D191508E600A96B7C /* main.m */,
+				522F2F12191508E600A96B7C /* Zomara-Info.plist */,
+				522F2F13191508E600A96B7C /* Zomara-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4DA79E914D3345A0055F672 /* Zomara */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4DA7A0214D3345A0055F672 /* Build configuration list for PBXNativeTarget "Zomara" */;
+			buildPhases = (
+				D4DA79E614D3345A0055F672 /* Sources */,
+				D4DA79E714D3345A0055F672 /* Frameworks */,
+				D4DA79E814D3345A0055F672 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zomara;
+			productName = IntegratingFacebookTutorial;
+			productReference = D4DA79EA14D3345A0055F672 /* Zomara.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4DA79E114D3345A0055F672 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = D4DA79E414D3345A0055F672 /* Build configuration list for PBXProject "Zomara" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D4DA79DF14D3345A0055F672;
+			productRefGroup = D4DA79EB14D3345A0055F672 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4DA79E914D3345A0055F672 /* Zomara */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4DA79E814D3345A0055F672 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522F2F1B191508E600A96B7C /* login-button-small-pressed.png in Resources */,
+				522F2F18191508E600A96B7C /* Default@2x.png in Resources */,
+				522F2F20191508E600A96B7C /* LoginViewController.xib in Resources */,
+				522F2F1A191508E600A96B7C /* Icon@2x.png in Resources */,
+				522F2F22191508E600A96B7C /* TableHeaderView.xib in Resources */,
+				522F2F1C191508E600A96B7C /* login-button-small-pressed@2x.png in Resources */,
+				522F2F1D191508E600A96B7C /* login-button-small.png in Resources */,
+				522F2F14191508E600A96B7C /* InfoPlist.strings in Resources */,
+				522F2F1E191508E600A96B7C /* login-button-small@2x.png in Resources */,
+				522F2F24191508E600A96B7C /* UserDetailsViewController.xib in Resources */,
+				522F2F19191508E600A96B7C /* Icon.png in Resources */,
+				522F2F17191508E600A96B7C /* Default.png in Resources */,
+				522F2F25191508E600A96B7C /* Zomara-Info.plist in Resources */,
+				522F2F16191508E600A96B7C /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4DA79E614D3345A0055F672 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522F2F1F191508E600A96B7C /* LoginViewController.m in Sources */,
+				522F2F21191508E600A96B7C /* main.m in Sources */,
+				522F2F23191508E600A96B7C /* UserDetailsViewController.m in Sources */,
+				522F2F15191508E600A96B7C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		522F2EFD191508E600A96B7C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				522F2EFE191508E600A96B7C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4DA7A0014D3345A0055F672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D4DA7A0114D3345A0055F672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4DA7A0314D3345A0055F672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zomara/Zomara-Prefix.pch";
+				INFOPLIST_FILE = "Zomara/Zomara-Info.plist";
+				OTHER_LDFLAGS = (
+					"-lsqlite3.0",
+					"-ObjC",
+				);
+				PRODUCT_NAME = Zomara;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D4DA7A0414D3345A0055F672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zomara/Zomara-Prefix.pch";
+				INFOPLIST_FILE = "Zomara/Zomara-Info.plist";
+				OTHER_LDFLAGS = (
+					"-lsqlite3.0",
+					"-ObjC",
+				);
+				PRODUCT_NAME = Zomara;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4DA79E414D3345A0055F672 /* Build configuration list for PBXProject "Zomara" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4DA7A0014D3345A0055F672 /* Debug */,
+				D4DA7A0114D3345A0055F672 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4DA7A0214D3345A0055F672 /* Build configuration list for PBXNativeTarget "Zomara" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4DA7A0314D3345A0055F672 /* Debug */,
+				D4DA7A0414D3345A0055F672 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4DA79E114D3345A0055F672 /* Project object */;
+}
