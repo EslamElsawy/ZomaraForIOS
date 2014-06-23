@@ -4,6 +4,9 @@
 #import "LoginViewController.h"
 #import "UserDetailsViewController.h"
 #import <Parse/Parse.h>
+#import "FriendsTableViewController.h"
+
+#define show_friend_segue @"show_friends"
 
 @interface LoginViewController()
 @property (nonatomic, strong) FBFriendPickerViewController *friendPickerController;
@@ -21,12 +24,43 @@
     
     // Check if user is cached and linked to Facebook, if so, bypass login    
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-        [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:NO];
+        [self showPickFriendPickerViewController];
+
+       // [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:NO];
     }
 }
 
 
 #pragma mark - Login mehtods
+
+- (void)showPickFriendPickerViewController {
+
+   /* self.friendPickerController = [[FBFriendPickerViewController alloc] init];
+    self.friendPickerController.title = @"Pick Friends";
+    self.friendPickerController.delegate = self;
+    [self.friendPickerController loadData];
+    [self.friendPickerController clearSelection];*/
+    
+    [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            NSArray *data = [result objectForKey:@"data"];
+            self.friends = data;
+            [self performSegueWithIdentifier:show_friend_segue sender:self];
+            
+        } else {
+            //      [self facebookRequestDidFailWithError:error];
+        }
+    }];
+//    [self.navigationController pushViewController:self.friendPickerController animated:YES];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:show_friend_segue]) {
+        FriendsTableViewController * friendsTableViewController = [segue destinationViewController];
+        friendsTableViewController.allFacebookFriends = self.friends;        
+    }
+}
 
 /* Login to facebook method */
 - (IBAction)loginButtonTouchHandler:(id)sender  {
@@ -48,13 +82,7 @@
                 [alert show];
             }
         }else{
-            self.friendPickerController = [[FBFriendPickerViewController alloc] init];
-            self.friendPickerController.title = @"Pick Friends";
-            self.friendPickerController.delegate = self;
-            [self.friendPickerController loadData];
-            [self.friendPickerController clearSelection];
-
-            [self.navigationController pushViewController:self.friendPickerController animated:YES];
+            [self showPickFriendPickerViewController];
 
         }
         /*else if (user.isNew) {
@@ -84,7 +112,15 @@
         }
         [text appendString:user.name];
     }
+    NSLog(@"Selected users %@",text);
     
+}
+
+- (BOOL)friendPickerViewController:(FBFriendPickerViewController *)friendPicker
+                 shouldIncludeUser:(id <FBGraphUser>)user{
+ //   [PFUser currentUser].user.Friends
+    //self.friendPickerController.
+    return YES;
 }
 
 - (void)facebookViewControllerCancelWasPressed:(id)sender {

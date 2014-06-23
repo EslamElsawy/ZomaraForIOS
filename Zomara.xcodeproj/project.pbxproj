@@ -10,23 +10,25 @@
 		30C949AC1829561000B17666 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C949AB1829561000B17666 /* FacebookSDK.framework */; };
 		30C949AE1829561800B17666 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C949AD1829561800B17666 /* Parse.framework */; };
 		522F2F14191508E600A96B7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 522F2EFD191508E600A96B7C /* InfoPlist.strings */; };
-		522F2F15191508E600A96B7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F2F00191508E600A96B7C /* AppDelegate.m */; };
-		522F2F16191508E600A96B7C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F01191508E600A96B7C /* Default-568h@2x.png */; };
-		522F2F17191508E600A96B7C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F02191508E600A96B7C /* Default.png */; };
-		522F2F18191508E600A96B7C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F03191508E600A96B7C /* Default@2x.png */; };
-		522F2F19191508E600A96B7C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F04191508E600A96B7C /* Icon.png */; };
-		522F2F1A191508E600A96B7C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F05191508E600A96B7C /* Icon@2x.png */; };
-		522F2F1B191508E600A96B7C /* login-button-small-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F06191508E600A96B7C /* login-button-small-pressed.png */; };
-		522F2F1C191508E600A96B7C /* login-button-small-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F07191508E600A96B7C /* login-button-small-pressed@2x.png */; };
-		522F2F1D191508E600A96B7C /* login-button-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F08191508E600A96B7C /* login-button-small.png */; };
-		522F2F1E191508E600A96B7C /* login-button-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F09191508E600A96B7C /* login-button-small@2x.png */; };
-		522F2F1F191508E600A96B7C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F2F0B191508E600A96B7C /* LoginViewController.m */; };
 		522F2F20191508E600A96B7C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F0C191508E600A96B7C /* LoginViewController.xib */; };
 		522F2F21191508E600A96B7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F2F0D191508E600A96B7C /* main.m */; };
-		522F2F22191508E600A96B7C /* TableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F0E191508E600A96B7C /* TableHeaderView.xib */; };
-		522F2F23191508E600A96B7C /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F2F10191508E600A96B7C /* UserDetailsViewController.m */; };
-		522F2F24191508E600A96B7C /* UserDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F11191508E600A96B7C /* UserDetailsViewController.xib */; };
 		522F2F25191508E600A96B7C /* Zomara-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F12191508E600A96B7C /* Zomara-Info.plist */; };
+		5263C24F19572F3A00B51A81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C23C19572F3A00B51A81 /* AppDelegate.m */; };
+		5263C25019572F3A00B51A81 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5263C23D19572F3A00B51A81 /* Default-568h@2x.png */; };
+		5263C25119572F3A00B51A81 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5263C23E19572F3A00B51A81 /* Default.png */; };
+		5263C25219572F3A00B51A81 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5263C23F19572F3A00B51A81 /* Default@2x.png */; };
+		5263C25319572F3A00B51A81 /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C24119572F3A00B51A81 /* FriendsTableViewController.m */; };
+		5263C25419572F3A00B51A81 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5263C24219572F3A00B51A81 /* Icon.png */; };
+		5263C25519572F3A00B51A81 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5263C24319572F3A00B51A81 /* Icon@2x.png */; };
+		5263C25619572F3A00B51A81 /* login-button-small-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5263C24419572F3A00B51A81 /* login-button-small-pressed.png */; };
+		5263C25719572F3A00B51A81 /* login-button-small-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5263C24519572F3A00B51A81 /* login-button-small-pressed@2x.png */; };
+		5263C25819572F3A00B51A81 /* login-button-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5263C24619572F3A00B51A81 /* login-button-small.png */; };
+		5263C25919572F3A00B51A81 /* login-button-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5263C24719572F3A00B51A81 /* login-button-small@2x.png */; };
+		5263C25A19572F3A00B51A81 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C24919572F3A00B51A81 /* LoginViewController.m */; };
+		5263C25B19572F3A00B51A81 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5263C24A19572F3A00B51A81 /* Storyboard.storyboard */; };
+		5263C25C19572F3A00B51A81 /* TableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5263C24B19572F3A00B51A81 /* TableHeaderView.xib */; };
+		5263C25D19572F3A00B51A81 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C24D19572F3A00B51A81 /* UserDetailsViewController.m */; };
+		5263C25E19572F3A00B51A81 /* UserDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5263C24E19572F3A00B51A81 /* UserDetailsViewController.xib */; };
 		6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D10F48216DD68E000690A0F /* CoreLocation.framework */; };
 		C425016D161BBAE400474BCD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4250169161BBAE400474BCD /* StoreKit.framework */; };
 		C4250170161BBAEE00474BCD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C425016F161BBAEE00474BCD /* libz.dylib */; };
@@ -45,27 +47,30 @@
 		30C949AB1829561000B17666 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		30C949AD1829561800B17666 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		522F2EFE191508E600A96B7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		522F2EFF191508E600A96B7C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Zomara/AppDelegate.h; sourceTree = SOURCE_ROOT; };
-		522F2F00191508E600A96B7C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Zomara/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		522F2F01191508E600A96B7C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Zomara/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
-		522F2F02191508E600A96B7C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Zomara/Default.png; sourceTree = SOURCE_ROOT; };
-		522F2F03191508E600A96B7C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Zomara/Default@2x.png"; sourceTree = SOURCE_ROOT; };
-		522F2F04191508E600A96B7C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Zomara/Icon.png; sourceTree = SOURCE_ROOT; };
-		522F2F05191508E600A96B7C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Zomara/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
-		522F2F06191508E600A96B7C /* login-button-small-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small-pressed.png"; path = "Zomara/login-button-small-pressed.png"; sourceTree = SOURCE_ROOT; };
-		522F2F07191508E600A96B7C /* login-button-small-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small-pressed@2x.png"; path = "Zomara/login-button-small-pressed@2x.png"; sourceTree = SOURCE_ROOT; };
-		522F2F08191508E600A96B7C /* login-button-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small.png"; path = "Zomara/login-button-small.png"; sourceTree = SOURCE_ROOT; };
-		522F2F09191508E600A96B7C /* login-button-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small@2x.png"; path = "Zomara/login-button-small@2x.png"; sourceTree = SOURCE_ROOT; };
-		522F2F0A191508E600A96B7C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Zomara/LoginViewController.h; sourceTree = SOURCE_ROOT; };
-		522F2F0B191508E600A96B7C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Zomara/LoginViewController.m; sourceTree = SOURCE_ROOT; };
 		522F2F0C191508E600A96B7C /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Zomara/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
 		522F2F0D191508E600A96B7C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Zomara/main.m; sourceTree = SOURCE_ROOT; };
-		522F2F0E191508E600A96B7C /* TableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableHeaderView.xib; path = Zomara/TableHeaderView.xib; sourceTree = SOURCE_ROOT; };
-		522F2F0F191508E600A96B7C /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailsViewController.h; path = Zomara/UserDetailsViewController.h; sourceTree = SOURCE_ROOT; };
-		522F2F10191508E600A96B7C /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailsViewController.m; path = Zomara/UserDetailsViewController.m; sourceTree = SOURCE_ROOT; };
-		522F2F11191508E600A96B7C /* UserDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserDetailsViewController.xib; path = Zomara/UserDetailsViewController.xib; sourceTree = SOURCE_ROOT; };
 		522F2F12191508E600A96B7C /* Zomara-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Zomara-Info.plist"; path = "Zomara/Zomara-Info.plist"; sourceTree = SOURCE_ROOT; };
 		522F2F13191508E600A96B7C /* Zomara-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Zomara-Prefix.pch"; path = "Zomara/Zomara-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		5263C23B19572F3A00B51A81 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Zomara/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		5263C23C19572F3A00B51A81 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Zomara/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		5263C23D19572F3A00B51A81 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Zomara/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		5263C23E19572F3A00B51A81 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Zomara/Default.png; sourceTree = SOURCE_ROOT; };
+		5263C23F19572F3A00B51A81 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Zomara/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		5263C24019572F3A00B51A81 /* FriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsTableViewController.h; path = Zomara/FriendsTableViewController.h; sourceTree = SOURCE_ROOT; };
+		5263C24119572F3A00B51A81 /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsTableViewController.m; path = Zomara/FriendsTableViewController.m; sourceTree = SOURCE_ROOT; };
+		5263C24219572F3A00B51A81 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Zomara/Icon.png; sourceTree = SOURCE_ROOT; };
+		5263C24319572F3A00B51A81 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Zomara/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		5263C24419572F3A00B51A81 /* login-button-small-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small-pressed.png"; path = "Zomara/login-button-small-pressed.png"; sourceTree = SOURCE_ROOT; };
+		5263C24519572F3A00B51A81 /* login-button-small-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small-pressed@2x.png"; path = "Zomara/login-button-small-pressed@2x.png"; sourceTree = SOURCE_ROOT; };
+		5263C24619572F3A00B51A81 /* login-button-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small.png"; path = "Zomara/login-button-small.png"; sourceTree = SOURCE_ROOT; };
+		5263C24719572F3A00B51A81 /* login-button-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small@2x.png"; path = "Zomara/login-button-small@2x.png"; sourceTree = SOURCE_ROOT; };
+		5263C24819572F3A00B51A81 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Zomara/LoginViewController.h; sourceTree = SOURCE_ROOT; };
+		5263C24919572F3A00B51A81 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Zomara/LoginViewController.m; sourceTree = SOURCE_ROOT; };
+		5263C24A19572F3A00B51A81 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Zomara/Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
+		5263C24B19572F3A00B51A81 /* TableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableHeaderView.xib; path = Zomara/TableHeaderView.xib; sourceTree = SOURCE_ROOT; };
+		5263C24C19572F3A00B51A81 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailsViewController.h; path = Zomara/UserDetailsViewController.h; sourceTree = SOURCE_ROOT; };
+		5263C24D19572F3A00B51A81 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailsViewController.m; path = Zomara/UserDetailsViewController.m; sourceTree = SOURCE_ROOT; };
+		5263C24E19572F3A00B51A81 /* UserDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserDetailsViewController.xib; path = Zomara/UserDetailsViewController.xib; sourceTree = SOURCE_ROOT; };
 		6D10F48216DD68E000690A0F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C4250169161BBAE400474BCD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C425016F161BBAEE00474BCD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -156,25 +161,28 @@
 		D4DA79F414D3345A0055F672 /* Zomara */ = {
 			isa = PBXGroup;
 			children = (
+				5263C23B19572F3A00B51A81 /* AppDelegate.h */,
+				5263C23C19572F3A00B51A81 /* AppDelegate.m */,
+				5263C23D19572F3A00B51A81 /* Default-568h@2x.png */,
+				5263C23E19572F3A00B51A81 /* Default.png */,
+				5263C23F19572F3A00B51A81 /* Default@2x.png */,
+				5263C24019572F3A00B51A81 /* FriendsTableViewController.h */,
+				5263C24119572F3A00B51A81 /* FriendsTableViewController.m */,
+				5263C24219572F3A00B51A81 /* Icon.png */,
+				5263C24319572F3A00B51A81 /* Icon@2x.png */,
+				5263C24419572F3A00B51A81 /* login-button-small-pressed.png */,
+				5263C24519572F3A00B51A81 /* login-button-small-pressed@2x.png */,
+				5263C24619572F3A00B51A81 /* login-button-small.png */,
+				5263C24719572F3A00B51A81 /* login-button-small@2x.png */,
+				5263C24819572F3A00B51A81 /* LoginViewController.h */,
+				5263C24919572F3A00B51A81 /* LoginViewController.m */,
+				5263C24A19572F3A00B51A81 /* Storyboard.storyboard */,
+				5263C24B19572F3A00B51A81 /* TableHeaderView.xib */,
+				5263C24C19572F3A00B51A81 /* UserDetailsViewController.h */,
+				5263C24D19572F3A00B51A81 /* UserDetailsViewController.m */,
+				5263C24E19572F3A00B51A81 /* UserDetailsViewController.xib */,
 				522F2EFC191508E600A96B7C /* en.lproj */,
-				522F2EFF191508E600A96B7C /* AppDelegate.h */,
-				522F2F00191508E600A96B7C /* AppDelegate.m */,
-				522F2F01191508E600A96B7C /* Default-568h@2x.png */,
-				522F2F02191508E600A96B7C /* Default.png */,
-				522F2F03191508E600A96B7C /* Default@2x.png */,
-				522F2F04191508E600A96B7C /* Icon.png */,
-				522F2F05191508E600A96B7C /* Icon@2x.png */,
-				522F2F06191508E600A96B7C /* login-button-small-pressed.png */,
-				522F2F07191508E600A96B7C /* login-button-small-pressed@2x.png */,
-				522F2F08191508E600A96B7C /* login-button-small.png */,
-				522F2F09191508E600A96B7C /* login-button-small@2x.png */,
-				522F2F0A191508E600A96B7C /* LoginViewController.h */,
-				522F2F0B191508E600A96B7C /* LoginViewController.m */,
 				522F2F0C191508E600A96B7C /* LoginViewController.xib */,
-				522F2F0E191508E600A96B7C /* TableHeaderView.xib */,
-				522F2F0F191508E600A96B7C /* UserDetailsViewController.h */,
-				522F2F10191508E600A96B7C /* UserDetailsViewController.m */,
-				522F2F11191508E600A96B7C /* UserDetailsViewController.xib */,
 				D4DA79F514D3345A0055F672 /* Supporting Files */,
 			);
 			name = Zomara;
@@ -241,20 +249,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522F2F1B191508E600A96B7C /* login-button-small-pressed.png in Resources */,
-				522F2F18191508E600A96B7C /* Default@2x.png in Resources */,
+				5263C25C19572F3A00B51A81 /* TableHeaderView.xib in Resources */,
+				5263C25219572F3A00B51A81 /* Default@2x.png in Resources */,
+				5263C25519572F3A00B51A81 /* Icon@2x.png in Resources */,
 				522F2F20191508E600A96B7C /* LoginViewController.xib in Resources */,
-				522F2F1A191508E600A96B7C /* Icon@2x.png in Resources */,
-				522F2F22191508E600A96B7C /* TableHeaderView.xib in Resources */,
-				522F2F1C191508E600A96B7C /* login-button-small-pressed@2x.png in Resources */,
-				522F2F1D191508E600A96B7C /* login-button-small.png in Resources */,
+				5263C25019572F3A00B51A81 /* Default-568h@2x.png in Resources */,
+				5263C25E19572F3A00B51A81 /* UserDetailsViewController.xib in Resources */,
 				522F2F14191508E600A96B7C /* InfoPlist.strings in Resources */,
-				522F2F1E191508E600A96B7C /* login-button-small@2x.png in Resources */,
-				522F2F24191508E600A96B7C /* UserDetailsViewController.xib in Resources */,
-				522F2F19191508E600A96B7C /* Icon.png in Resources */,
-				522F2F17191508E600A96B7C /* Default.png in Resources */,
+				5263C25719572F3A00B51A81 /* login-button-small-pressed@2x.png in Resources */,
+				5263C25919572F3A00B51A81 /* login-button-small@2x.png in Resources */,
 				522F2F25191508E600A96B7C /* Zomara-Info.plist in Resources */,
-				522F2F16191508E600A96B7C /* Default-568h@2x.png in Resources */,
+				5263C25419572F3A00B51A81 /* Icon.png in Resources */,
+				5263C25B19572F3A00B51A81 /* Storyboard.storyboard in Resources */,
+				5263C25119572F3A00B51A81 /* Default.png in Resources */,
+				5263C25619572F3A00B51A81 /* login-button-small-pressed.png in Resources */,
+				5263C25819572F3A00B51A81 /* login-button-small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,10 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522F2F1F191508E600A96B7C /* LoginViewController.m in Sources */,
+				5263C25A19572F3A00B51A81 /* LoginViewController.m in Sources */,
+				5263C25319572F3A00B51A81 /* FriendsTableViewController.m in Sources */,
+				5263C24F19572F3A00B51A81 /* AppDelegate.m in Sources */,
+				5263C25D19572F3A00B51A81 /* UserDetailsViewController.m in Sources */,
 				522F2F21191508E600A96B7C /* main.m in Sources */,
-				522F2F23191508E600A96B7C /* UserDetailsViewController.m in Sources */,
-				522F2F15191508E600A96B7C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
