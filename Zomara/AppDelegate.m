@@ -24,7 +24,6 @@
     // ****************************************************************************
     [PFFacebookUtils initializeFacebook];
     NSLog(@"version %@",[FBSettings sdkVersion]);
-   // [FBSettings enablePlatformCompatibility:YES];
 
     // Register for push notifications
     [application registerForRemoteNotificationTypes:
@@ -42,11 +41,6 @@
     [currentInstallation saveInBackground];
 }
 
-- (void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [PFPush handlePush:userInfo];
-}
-
 // ****************************************************************************
 // App switching methods to support Facebook Single Sign-On.
 // ****************************************************************************
@@ -57,11 +51,11 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 }
 
 /*When a push notification is received while the application is not in the foreground, it is displayed in the iOS Notification Center. However, if the notification is received while the app is active, it is up to the app to handle it. To do so, we can implement the [application:didReceiveRemoteNotification] method in the app delegate. In our case, we will simply ask Parse to handle it for us. Parse will create a modal alert and display the push notification's content.*/
-/*- (void)application:(UIApplication *)application
+- (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
     //TODO: should we remove this method?
     [PFPush handlePush:userInfo];
-}*/
+}
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     /*

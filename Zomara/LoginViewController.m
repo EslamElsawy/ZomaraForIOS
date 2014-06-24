@@ -20,23 +20,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Facebook Profile";
+    self.title = @"Zomara App";
     
     // Check if user is cached and linked to Facebook, if so, bypass login    
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-        [self showPickFriendPickerViewController];
-
-       // [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:NO];
+        [self showFriendsViewController];
     }
 }
 
 
 #pragma mark - Login mehtods
 
-- (void)showPickFriendPickerViewController {
+- (void)showFriendsViewController {
 
 //    self.friendPickerController = [[FBFriendPickerViewController alloc] init];
-//    self.friendPickerController.title = @"Pick Friends";
+//    self.friendPickerController.title = @"Wake Your Friends Up";
 //    self.friendPickerController.delegate = self;
 //    [self.friendPickerController loadData];
 //    [self.friendPickerController clearSelection];
@@ -45,82 +43,45 @@
 
     [[FBRequest requestForMe] startWithCompletionHandler: ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
         if (error) {
-            //Throws the code 100 error here
-            //completionBlock(nil, error);
+            NSLog(@"Uh oh. An error occurred: %@", error);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch User Data Error" message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+            [alert show];
         }else{
             FBRequest *friendsRequest = [FBRequest requestForGraphPath:@"/me/friends"];
-          //  FBRequest* friendsRequest = [FBRequest requestForMyFriends];
-            [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,NSError *error) {
-              
-                {
+            [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,NSError *error) {              
+                if(!error){
                     NSArray *data = [result objectForKey:@"data"];
-                    
 
                     self.friends = data;
                     [self performSegueWithIdentifier:show_friend_segue sender:self];
 
-                    /*for(NSDictionary * friendDict in friendJSONs)
-                    {
-                        SocialProfile *friend=[[SocialProfile alloc] initWithDictionary:friendDict socialMedia:kSocialMediaFacebook];
-                        [friends addObject:friend];
-                    }*/
-                  //  completionBlock(friends, nil);
+                }else{
+                    NSLog(@"Uh oh. An error occurred: %@", error);
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch Friends Error" message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+                    [alert show];
                 }
             }];
         }
     }];
-//
-//   /* [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-//        if (!error) {
-//            NSArray *data = [result objectForKey:@"data"];
-//            self.friends = data;
-//            [self performSegueWithIdentifier:show_friend_segue sender:self];
-//            
-//        } else {
-//            NSLog(@"Uh oh. An error occurred: %@", error);
-//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch Friends Error" message:[error description] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
-//            [alert show];
-//            //      [self facebookRequestDidFailWithError:error];
-//        }
-//    }];*/
-////    [self.navigationController pushViewController:self.friendPickerController animated:YES];
+
 }
 
-- (BOOL)retrieveFacebookFriendsForProfileId:(NSString *)fbProfileId completionBlock:(void (^)(NSArray *, NSError *))completionBlock
-{
-    
-    [FBSession openActiveSessionWithReadPermissions:nil
-                                       allowLoginUI:YES
-                                  completionHandler:^(FBSession *session,
-                                                      FBSessionState state,
-                                                      NSError *error) {
-                                      if (error) {
-                                          
-                                          NSLog(@"Error");
-                                      } else if (session.isOpen) {
-                                          
-                                          
-                                      }
-                                  }];
-    return YES;
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:show_friend_segue]) {
         FriendsTableViewController * friendsTableViewController = [segue destinationViewController];
-        friendsTableViewController.allFacebookFriends = self.friends;        
+        friendsTableViewController.friends = self.friends;
     }
 }
 
 /* Login to facebook method */
 - (IBAction)loginButtonTouchHandler:(id)sender  {
     // Set permissions required from the facebook user account
-    NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location",@"user_friends"];
+    NSArray *permissionsArray = @[ @"user_about_me", @"user_location",@"user_friends"];
     
     // Login PFUser using facebook
-    NSLog(@"compatible with old API v 1.0 %d",[FBSettings isPlatformCompatibilityEnabled]);
-          
+    
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
         [_activityIndicator stopAnimating]; // Hide loading indicator
         
@@ -131,23 +92,14 @@
                 [alert show];
             } else {
                 NSLog(@"Uh oh. An error occurred: %@", error);
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:[error description] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:@"Please check your internet connection" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
                 [alert show];
             }
         }else{
-            [self updateUser];
-            [self showPickFriendPickerViewController];
+            [self updateUserDataOnParse];
+            [self showFriendsViewController];
 
         }
-        /*else if (user.isNew) {
-            NSLog(@"User with facebook signed up and logged in!");
-            [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
-        } else {
-            NSLog(@"User with facebook logged in!");
-            [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
-        }*/
-     
-     
 
     }];
     
@@ -155,7 +107,7 @@
 }
 
 
-- (void) updateUser{
+- (void) updateUserDataOnParse{
     // Send request to Facebook
     FBRequest *request = [FBRequest requestForMe];
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
@@ -166,48 +118,22 @@
            
             NSString *facebookID = userData[@"id"];
             NSString *facebookName = userData[@"name"];
-            NSString *facebookUserName = userData[@"username"];
             NSString *facebookLink = userData[@"link"];
 
             [[PFUser currentUser] setObject:facebookID forKey:@"facebookId"];
             [[PFUser currentUser] setObject:facebookName forKey:@"facebookName"];
-            [[PFUser currentUser] setObject:facebookUserName forKey:@"facebookUsername"];
             [[PFUser currentUser] setObject:facebookLink forKey:@"facebookLink"];
             [[PFUser currentUser] saveInBackground];
             
             [[PFInstallation currentInstallation] setObject:facebookID forKey:@"facebookId"];
             [[PFInstallation currentInstallation] setObject:facebookName forKey:@"facebookName"];
-            [[PFInstallation currentInstallation] setObject:facebookUserName forKey:@"facebookUsername"];
             [[PFInstallation currentInstallation] saveInBackground];
+        }else{
+            NSLog(@"Error update user data on parse %@",[error description]);
         }
     }];
 }
      
-- (void)facebookViewControllerDoneWasPressed:(id)sender {
-    NSMutableString *text = [[NSMutableString alloc] init];
-    
-    // we pick up the users from the selection, and create a string that we use to update the text view
-    // at the bottom of the display; note that self.selection is a property inherited from our base class
-    for (id<FBGraphUser> user in self.friendPickerController.selection) {
-        if ([text length]) {
-            [text appendString:@", "];
-        }
-        [text appendString:user.name];
-    }
-    NSLog(@"Selected users %@",text);
-    
-}
-
-- (BOOL)friendPickerViewController:(FBFriendPickerViewController *)friendPicker
-                 shouldIncludeUser:(id <FBGraphUser>)user{
- //   [PFUser currentUser].user.Friends
-    //self.friendPickerController.
-    return YES;
-}
-
-- (void)facebookViewControllerCancelWasPressed:(id)sender {
-}
-
 
 
 @end

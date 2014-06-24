@@ -10,6 +10,6 @@
 
 @interface FriendsTableViewController : UITableViewController
 
-@property (atomic,readwrite) NSArray *allFacebookFriends;
+@property NSArray * friends;
 
 @end
