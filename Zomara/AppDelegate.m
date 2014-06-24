@@ -58,6 +58,11 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    if (currentInstallation.badge != 0) {
+        currentInstallation.badge = 0;
+        [currentInstallation saveEventually];
+    }
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */

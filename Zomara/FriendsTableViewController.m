@@ -67,9 +67,15 @@
     PFQuery *pushQuery = [PFInstallation query];
     [pushQuery whereKey:@"facebookId" equalTo:zomaraFriend[@"id"]];
     
-    // Send push notification to query
-    [PFPush sendPushMessageToQueryInBackground:pushQuery
-                                   withMessage:@"Asalatu khyron mena anoouummm!!!"];
+    NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+                          @"الصلاة خير من النوم", @"alert",
+                          @"Increment", @"badge",
+                          @"fajr.caf", @"sound",
+                          nil];
+    PFPush *push = [[PFPush alloc] init];
+    [push setQuery:pushQuery];
+    [push setData:data];
+    [push sendPushInBackground];
     
 }
 

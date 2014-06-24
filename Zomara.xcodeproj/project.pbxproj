@@ -13,6 +13,7 @@
 		522F2F20191508E600A96B7C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F0C191508E600A96B7C /* LoginViewController.xib */; };
 		522F2F21191508E600A96B7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F2F0D191508E600A96B7C /* main.m */; };
 		522F2F25191508E600A96B7C /* Zomara-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 522F2F12191508E600A96B7C /* Zomara-Info.plist */; };
+		5245650A1959E72300602C6D /* fajr.caf in Resources */ = {isa = PBXBuildFile; fileRef = 524565091959E62000602C6D /* fajr.caf */; };
 		5263C24F19572F3A00B51A81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C23C19572F3A00B51A81 /* AppDelegate.m */; };
 		5263C25019572F3A00B51A81 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5263C23D19572F3A00B51A81 /* Default-568h@2x.png */; };
 		5263C25119572F3A00B51A81 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5263C23E19572F3A00B51A81 /* Default.png */; };
@@ -51,6 +52,7 @@
 		522F2F0D191508E600A96B7C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Zomara/main.m; sourceTree = SOURCE_ROOT; };
 		522F2F12191508E600A96B7C /* Zomara-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Zomara-Info.plist"; path = "Zomara/Zomara-Info.plist"; sourceTree = SOURCE_ROOT; };
 		522F2F13191508E600A96B7C /* Zomara-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Zomara-Prefix.pch"; path = "Zomara/Zomara-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		524565091959E62000602C6D /* fajr.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fajr.caf; sourceTree = SOURCE_ROOT; };
 		5263C23B19572F3A00B51A81 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Zomara/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		5263C23C19572F3A00B51A81 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Zomara/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		5263C23D19572F3A00B51A81 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Zomara/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -192,6 +194,7 @@
 		D4DA79F514D3345A0055F672 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				524565091959E62000602C6D /* fajr.caf */,
 				522F2F0D191508E600A96B7C /* main.m */,
 				522F2F12191508E600A96B7C /* Zomara-Info.plist */,
 				522F2F13191508E600A96B7C /* Zomara-Prefix.pch */,
@@ -252,6 +255,7 @@
 				5263C25C19572F3A00B51A81 /* TableHeaderView.xib in Resources */,
 				5263C25219572F3A00B51A81 /* Default@2x.png in Resources */,
 				5263C25519572F3A00B51A81 /* Icon@2x.png in Resources */,
+				5245650A1959E72300602C6D /* fajr.caf in Resources */,
 				522F2F20191508E600A96B7C /* LoginViewController.xib in Resources */,
 				5263C25019572F3A00B51A81 /* Default-568h@2x.png in Resources */,
 				5263C25E19572F3A00B51A81 /* UserDetailsViewController.xib in Resources */,
