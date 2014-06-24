@@ -31,9 +31,10 @@
             String currName = curr.getString("facebookName");
      */
     
-    NSArray * ids = [self.allFacebookFriends valueForKey:@"id"];
+  /*  NSArray * ids = [self.allFacebookFriends valueForKey:@"id"];
     [query whereKey:@"facebookId" containedIn:ids];
-    self.zomaraFriends = [query findObjects];
+    self.zomaraFriends = [query findObjects];*/
+    self.zomaraFriends = self.allFacebookFriends;
     [self.tableView reloadData];
     NSLog(@"Zomara Friends %@",self.zomaraFriends);
     // Uncomment the following line to preserve selection between presentations.
@@ -65,7 +66,7 @@
     
     // Configure the cell...
     PFUser * zomaraFriend = self.zomaraFriends[indexPath.row];
-    NSString * name = zomaraFriend[@"facebookName"];
+    NSString * name = zomaraFriend[@"name"];
     cell.textLabel.text = name;
     
     return cell;
@@ -79,13 +80,15 @@
     UITableViewCell * cell = (UITableViewCell *)wakeButton.superview.superview.superview;
     NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
     PFUser * zomaraFriend = self.zomaraFriends[indexPath.row];
-    NSString * name = zomaraFriend[@"facebookName"];
+    NSString * name = zomaraFriend[@"name"];
     NSLog(@"wake %@",name);
     
     // Create our Installation query
     //TODO: send to PFUser or PFInstallation??
-    PFQuery *pushQuery = [PFInstallation query];
-    [pushQuery whereKey:@"facebookId" equalTo:zomaraFriend[@"facebookId"]];
+//    PFQuery *pushQuery = [PFInstallation query];
+    PFQuery *pushQuery = [PFUser query];
+//    [pushQuery whereKey:@"facebookId" equalTo:zomaraFriend[@"facebookId"]];
+    [pushQuery whereKey:@"facebookId" equalTo:zomaraFriend[@"id"]];
     
     // Send push notification to query
     [PFPush sendPushMessageToQueryInBackground:pushQuery
