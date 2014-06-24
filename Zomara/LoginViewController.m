@@ -163,46 +163,21 @@
         if (!error) {
             // Parse the data received
             NSDictionary *userData = (NSDictionary *)result;
-            
+           
             NSString *facebookID = userData[@"id"];
-            
-            NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
-            
-            
-            NSMutableDictionary *userProfile = [NSMutableDictionary dictionaryWithCapacity:7];
-            
-            if (facebookID) {
-                userProfile[@"facebookId"] = facebookID;
-            }
-            
-            if (userData[@"name"]) {
-                userProfile[@"name"] = userData[@"name"];
-            }
-            
-            if (userData[@"location"][@"name"]) {
-                userProfile[@"location"] = userData[@"location"][@"name"];
-            }
-            
-            if (userData[@"gender"]) {
-                userProfile[@"gender"] = userData[@"gender"];
-            }
-            
-            if (userData[@"birthday"]) {
-                userProfile[@"birthday"] = userData[@"birthday"];
-            }
-            
-            if (userData[@"relationship_status"]) {
-                userProfile[@"relationship"] = userData[@"relationship_status"];
-            }
-            
-            if ([pictureURL absoluteString]) {
-                userProfile[@"pictureURL"] = [pictureURL absoluteString];
-            }
-            
-            [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
+            NSString *facebookName = userData[@"name"];
+            NSString *facebookUserName = userData[@"username"];
+            NSString *facebookLink = userData[@"link"];
+
             [[PFUser currentUser] setObject:facebookID forKey:@"facebookId"];
+            [[PFUser currentUser] setObject:facebookName forKey:@"facebookName"];
+            [[PFUser currentUser] setObject:facebookUserName forKey:@"facebookUsername"];
+            [[PFUser currentUser] setObject:facebookLink forKey:@"facebookLink"];
             [[PFUser currentUser] saveInBackground];
+            
             [[PFInstallation currentInstallation] setObject:facebookID forKey:@"facebookId"];
+            [[PFInstallation currentInstallation] setObject:facebookName forKey:@"facebookName"];
+            [[PFInstallation currentInstallation] setObject:facebookUserName forKey:@"facebookUsername"];
             [[PFInstallation currentInstallation] saveInBackground];
         }
     }];
