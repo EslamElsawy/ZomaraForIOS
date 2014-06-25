@@ -31,15 +31,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Check out your facebook profile by logging in with the button below!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xmb-5S-OKt">
-                                <rect key="frame" x="27" y="227" width="266" height="115"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.90196084980000002" green="0.90196084980000002" blue="0.90196084980000002" alpha="0.0" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3W-Ns-yVw">
-                                <rect key="frame" x="73" y="439" width="159" height="40"/>
+                                <rect key="frame" x="80" y="435" width="159" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <inset key="contentEdgeInsets" minX="44" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -57,7 +50,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lXN-7A-Bxx">
-                                <rect key="frame" x="141" y="266" width="37" height="37"/>
+                                <rect key="frame" x="141" y="269" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" cocoaTouchSystemColor="darkTextColor"/>
                             </activityIndicatorView>
@@ -66,6 +59,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="iBe-QV-ibJ"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="lXN-7A-Bxx" id="3MG-1D-zsJ"/>
                         <segue destination="WSu-fM-liS" kind="push" identifier="show_friends" id="T4U-SS-bkz"/>
                     </connections>
                 </viewController>
@@ -82,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FRIEND_CELL_ID" id="UNH-gc-oXp">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FRIEND_CELL_ID" id="UNH-gc-oXp" customClass="FriendCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UNH-gc-oXp" id="eKH-dh-lJb">
@@ -96,11 +90,28 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="wake:" destination="WSu-fM-liS" eventType="touchUpInside" id="wzk-Hn-lJu"/>
+                                                <action selector="alarmButtonTouched" destination="UNH-gc-oXp" eventType="touchUpInside" id="gsi-8Q-o6I"/>
                                             </connections>
                                         </button>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWA-0o-vuC" customClass="FBProfilePictureView">
+                                            <rect key="frame" x="16" y="1" width="45" height="45"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </view>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfD-8R-maA">
+                                            <rect key="frame" x="69" y="13" width="161" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="delegate" destination="WSu-fM-liS" id="Fcm-KP-SGG"/>
+                                    <outlet property="nameLabel" destination="jfD-8R-maA" id="GKi-OB-zST"/>
+                                    <outlet property="profilePictureView" destination="hWA-0o-vuC" id="oyo-Lj-k3v"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

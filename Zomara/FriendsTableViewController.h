@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FriendCell.h"
 
-@interface FriendsTableViewController : UITableViewController
+@interface FriendsTableViewController : UITableViewController<FriendCellDelegate>
 
 @property NSArray * friends;
 

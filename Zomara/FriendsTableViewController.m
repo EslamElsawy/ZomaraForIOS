@@ -13,10 +13,32 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    [super viewDidLoad];    
     
-    [self.tableView reloadData];
-    NSLog(@"Zomara Friends %@",self.friends);
+    [[FBRequest requestForMe] startWithCompletionHandler: ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
+        if (error) {
+            NSLog(@"Uh oh. An error occurred: %@", error);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch User Data Error" message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+            [alert show];
+        }else{
+            FBRequest *friendsRequest = [FBRequest requestForGraphPath:@"/me/friends"];
+            [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,NSError *error) {
+                if(!error){
+                    NSArray *data = [result objectForKey:@"data"];
+                    
+                    self.friends = data;
+                    NSLog(@"Zomara Friends %@",self.friends);
+                    [self.tableView reloadData];
+                    
+                }else{
+                    NSLog(@"Uh oh. An error occurred: %@", error);
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch Friends Error" message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+                    [alert show];
+                }
+            }];
+        }
+    }];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -42,22 +64,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FRIEND_CELL_ID" forIndexPath:indexPath];
+    FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FRIEND_CELL_ID" forIndexPath:indexPath];
     
     // Configure the cell...
     PFUser * zomaraFriend = self.friends[indexPath.row];
     NSString * name = zomaraFriend[@"name"];
-    cell.textLabel.text = name;
+    cell.nameLabel.text = name;
+    NSString * id = zomaraFriend[@"id"];
+    cell.profilePictureView.profileID = id;
     
     return cell;
 }
 
 
+- (void) alarmButtonTouchedOnCell:(UITableViewCell*) cell{
 
-- (IBAction)wake:(id)sender {
-    UIButton * wakeButton = sender;
-    //TODO: Make a friend cell with delegate to get cell easily
-    UITableViewCell * cell = (UITableViewCell *)wakeButton.superview.superview.superview;
     NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
     PFUser * zomaraFriend = self.friends[indexPath.row];
     NSString * name = zomaraFriend[@"name"];

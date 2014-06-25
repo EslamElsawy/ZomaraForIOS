@@ -2,7 +2,6 @@
 //  Copyright (c) 2013 Parse. All rights reserved.
 
 #import "LoginViewController.h"
-#import "UserDetailsViewController.h"
 #import <Parse/Parse.h>
 #import "FriendsTableViewController.h"
 
@@ -41,39 +40,10 @@
 //    
 //    [self.navigationController pushViewController:self.friendPickerController animated:YES];
 
-    [[FBRequest requestForMe] startWithCompletionHandler: ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
-        if (error) {
-            NSLog(@"Uh oh. An error occurred: %@", error);
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch User Data Error" message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
-            [alert show];
-        }else{
-            FBRequest *friendsRequest = [FBRequest requestForGraphPath:@"/me/friends"];
-            [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,NSError *error) {              
-                if(!error){
-                    NSArray *data = [result objectForKey:@"data"];
-
-                    self.friends = data;
-                    [self performSegueWithIdentifier:show_friend_segue sender:self];
-
-                }else{
-                    NSLog(@"Uh oh. An error occurred: %@", error);
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch Friends Error" message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
-                    [alert show];
-                }
-            }];
-        }
-    }];
+      [self performSegueWithIdentifier:show_friend_segue sender:self];
 
 }
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:show_friend_segue]) {
-        FriendsTableViewController * friendsTableViewController = [segue destinationViewController];
-        friendsTableViewController.friends = self.friends;
-    }
-}
 
 /* Login to facebook method */
 - (IBAction)loginButtonTouchHandler:(id)sender  {
@@ -82,9 +52,14 @@
     
     // Login PFUser using facebook
     
+    UIButton * button = (UIButton*)sender;
+    button.enabled = YES;
+    [_activityIndicator startAnimating]; // Show loading indicator until login is finished
+
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
         [_activityIndicator stopAnimating]; // Hide loading indicator
-        
+        button.enabled = FALSE;
+
         if (!user) {
             if (!error) {
                 NSLog(@"Uh oh. The user cancelled the Facebook login.");
@@ -103,7 +78,6 @@
 
     }];
     
-    [_activityIndicator startAnimating]; // Show loading indicator until login is finished
 }
 
 
