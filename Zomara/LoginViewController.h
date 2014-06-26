@@ -7,6 +7,12 @@
 @interface LoginViewController : UIViewController<FBFriendPickerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+@property (nonatomic, strong) IBOutlet UIButton *facebookIconButton;
+@property (nonatomic, strong) IBOutlet UIButton *loginButton;
+
+@property (nonatomic, strong) IBOutlet UIImageView *backgroundImageView;
+
 - (IBAction)loginButtonTouchHandler:(id)sender;
 
 @end

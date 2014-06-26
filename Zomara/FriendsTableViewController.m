@@ -14,6 +14,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];    
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
+    self.tableView.backgroundView = background;
     
     [[FBRequest requestForMe] startWithCompletionHandler: ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
         if (error) {
@@ -39,25 +44,21 @@
         }
     }];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
     return [self.friends count];
 }
 
@@ -67,12 +68,8 @@
     FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FRIEND_CELL_ID" forIndexPath:indexPath];
     
     // Configure the cell...
-    PFUser * zomaraFriend = self.friends[indexPath.row];
-    NSString * name = zomaraFriend[@"name"];
-    cell.nameLabel.text = name;
-    NSString * id = zomaraFriend[@"id"];
-    cell.profilePictureView.profileID = id;
-    
+    cell.zomaraFriend = self.friends[indexPath.row];
+   
     return cell;
 }
 

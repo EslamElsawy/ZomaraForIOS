@@ -12,8 +12,14 @@
 
 - (void) alarmButtonTouched{
     [self.delegate alarmButtonTouchedOnCell:self];
-    
 }
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+
+    self.nameLabel.text = self.zomaraFriend[@"name"];;
+    self.profilePictureView.profileID = self.zomaraFriend[@"id"];
+    self.profilePictureView.layer.cornerRadius = 38;
+}
 
 @end

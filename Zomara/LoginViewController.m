@@ -5,12 +5,7 @@
 #import <Parse/Parse.h>
 #import "FriendsTableViewController.h"
 
-#define show_friend_segue @"show_friends"
-
-@interface LoginViewController()
-@property (nonatomic, strong) FBFriendPickerViewController *friendPickerController;
-
-@end
+#define SHOW_FRIENDS_SEGUE @"show_friends"
 
 @implementation LoginViewController
 
@@ -19,7 +14,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Zomara App";
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+    if (IS_IPHONE_5) {
+        self.backgroundImageView.image = [UIImage imageNamed:@"background_intro-568h@2x"];
+    }
     
     // Check if user is cached and linked to Facebook, if so, bypass login    
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
@@ -27,20 +26,21 @@
     }
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
 
 #pragma mark - Login mehtods
 
 - (void)showFriendsViewController {
 
-//    self.friendPickerController = [[FBFriendPickerViewController alloc] init];
-//    self.friendPickerController.title = @"Wake Your Friends Up";
-//    self.friendPickerController.delegate = self;
-//    [self.friendPickerController loadData];
-//    [self.friendPickerController clearSelection];
-//    
-//    [self.navigationController pushViewController:self.friendPickerController animated:YES];
-
-      [self performSegueWithIdentifier:show_friend_segue sender:self];
+    [self performSegueWithIdentifier:SHOW_FRIENDS_SEGUE sender:self];
 
 }
 
@@ -52,13 +52,15 @@
     
     // Login PFUser using facebook
     
-    UIButton * button = (UIButton*)sender;
-    button.enabled = YES;
+    self.facebookIconButton.enabled = NO;
+    self.loginButton.enabled = NO;
+    //self.loginButton.titleLabel.text = @"Logout";
     [_activityIndicator startAnimating]; // Show loading indicator until login is finished
 
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
         [_activityIndicator stopAnimating]; // Hide loading indicator
-        button.enabled = FALSE;
+        self.facebookIconButton.enabled = YES;
+        self.loginButton.enabled = YES;
 
         if (!user) {
             if (!error) {
