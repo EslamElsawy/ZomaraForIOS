@@ -20,30 +20,41 @@
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
     self.tableView.backgroundView = background;
     
+    // Refresh Control
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    refreshControl.tintColor = [UIColor whiteColor];
+    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [self setRefreshControl:refreshControl];
+    refreshControl.layer.zPosition += 1;
+
+    [self refresh];
+    
+}
+
+- (void) refresh{
     [[FBRequest requestForMe] startWithCompletionHandler: ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
+
         if (error) {
             NSLog(@"Uh oh. An error occurred: %@", error);
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch User Data Error" message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
             [alert show];
+            [self.refreshControl endRefreshing];
         }else{
             FBRequest *friendsRequest = [FBRequest requestForGraphPath:@"/me/friends"];
             [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,NSError *error) {
                 if(!error){
-                    NSArray *data = [result objectForKey:@"data"];
-                    
+                    NSArray *data = [result objectForKey:@"data"];                    
                     self.friends = data;
-                    NSLog(@"Zomara Friends %@",self.friends);
                     [self.tableView reloadData];
-                    
                 }else{
                     NSLog(@"Uh oh. An error occurred: %@", error);
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch Friends Error" message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
                     [alert show];
                 }
+                [self.refreshControl endRefreshing];
             }];
         }
     }];
-    
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{

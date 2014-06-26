@@ -11,7 +11,7 @@
                     <size key="freeformSize" width="320" height="568"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="UU5-W0-2uV">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.20000001789999999" green="0.46274513010000001" blue="0.6549019814" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.023529414087533951" green="0.12156863510608673" blue="0.20000001788139343" alpha="1" colorSpace="deviceRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -94,20 +94,20 @@
         <scene sceneID="zIS-69-1YJ">
             <objects>
                 <tableViewController id="WSu-fM-liS" customClass="FriendsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="ygV-qC-DyG">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="ygV-qC-DyG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FRIEND_CELL_ID" id="UNH-gc-oXp" customClass="FriendCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="90"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UNH-gc-oXp" id="eKH-dh-lJb">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="r4w-F4-vts">
-                                            <rect key="frame" x="245" y="11" width="63" height="63"/>
+                                            <rect key="frame" x="245" y="18" width="63" height="63"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="alarm_icon.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -117,16 +117,16 @@
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact_bg.png" id="XlW-hG-gFt">
-                                            <rect key="frame" x="14" y="5" width="80" height="80"/>
+                                            <rect key="frame" x="14" y="10" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" id="hWA-0o-vuC" customClass="FBProfilePictureView">
-                                            <rect key="frame" x="17" y="8" width="76" height="76"/>
+                                            <rect key="frame" x="17" y="13" width="76" height="76"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </view>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jfD-8R-maA">
-                                            <rect key="frame" x="104" y="22" width="133" height="46"/>
+                                            <rect key="frame" x="104" y="28" width="133" height="46"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <string key="text" base64-UTF8="YES">
 EE11aGFtbWFkIEhhc3NhbiBOYXNyIEVsZGluA
