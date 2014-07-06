@@ -17,8 +17,11 @@
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     [self setNeedsStatusBarAppearanceUpdate];
     
-    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
-    self.tableView.backgroundView = background;
+    if (IS_IPHONE_5) {
+        self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background-568h@2x"]];
+    }else{
+        self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+    }
     
     // Refresh Control
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
@@ -130,14 +133,7 @@
             //Save results and update the table
             NSMutableArray * awakenFriends = [NSMutableArray array];
             for(PFUser * friend in objects){
-                
-                NSDate * lastAwakenAt = friend[LAST_AWAKEN_AT];
-                if(!lastAwakenAt){
-                    [awakenFriends addObject:friend];
-                }
-                
-                NSInteger hoursBeenAwaken = [[NSDate date]timeIntervalSinceDate:lastAwakenAt]/3600;
-                if(hoursBeenAwaken>4){
+                if([self isFriendSleep:friend]){
                     [awakenFriends addObject:friend];
                 }
             }
@@ -147,4 +143,19 @@
         [self.refreshControl endRefreshing];
     }];
 }
+
+- (BOOL) isFriendSleep:(PFUser*) friend{
+    NSDate * lastAwakenAt = friend[LAST_AWAKEN_AT];
+    if(!lastAwakenAt){
+        return YES;
+    }
+    
+    NSInteger hoursSinceBeenAwaken = [[NSDate date]timeIntervalSinceDate:lastAwakenAt]/3600;
+    if(hoursSinceBeenAwaken>4){
+        return YES;
+    }
+    
+    return NO;
+}
+
 @end

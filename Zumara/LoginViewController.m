@@ -17,7 +17,7 @@
     [self setNeedsStatusBarAppearanceUpdate];
     
     if (IS_IPHONE_5) {
-        self.backgroundImageView.image = [UIImage imageNamed:@"background_intro-568h@2x"];
+        self.backgroundImageView.image = [UIImage imageNamed:@"Default-568h@2x"];
     }
     
     // Check if user is cached and linked to Facebook, if so, bypass login    

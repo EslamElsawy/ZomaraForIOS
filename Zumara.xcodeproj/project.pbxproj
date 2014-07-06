@@ -14,19 +14,21 @@
 		5289DD2B1969A26700A4B8FA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD131969A26700A4B8FA /* Storyboard.storyboard */; };
 		5289DD2C1969A26700A4B8FA /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5289DD161969A26700A4B8FA /* FriendCell.m */; };
 		5289DD2D1969A26700A4B8FA /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5289DD181969A26700A4B8FA /* FriendsTableViewController.m */; };
-		5289DD2E1969A26700A4B8FA /* alarm_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1A1969A26700A4B8FA /* alarm_icon@2x.png */; };
-		5289DD2F1969A26700A4B8FA /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1B1969A26700A4B8FA /* background@2x.png */; };
-		5289DD301969A26700A4B8FA /* contact_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1C1969A26700A4B8FA /* contact_bg@2x.png */; };
-		5289DD311969A26700A4B8FA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1D1969A26700A4B8FA /* Default-568h@2x.png */; };
-		5289DD321969A26700A4B8FA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1E1969A26700A4B8FA /* Default@2x.png */; };
-		5289DD331969A26700A4B8FA /* facebook_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1F1969A26700A4B8FA /* facebook_icon@2x.png */; };
-		5289DD341969A26700A4B8FA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD201969A26700A4B8FA /* Icon.png */; };
-		5289DD351969A26700A4B8FA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD211969A26700A4B8FA /* Icon@2x.png */; };
-		5289DD361969A26700A4B8FA /* sign_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD221969A26700A4B8FA /* sign_button@2x.png */; };
 		5289DD371969A26700A4B8FA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5289DD241969A26700A4B8FA /* LoginViewController.m */; };
 		5289DD381969A26700A4B8FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5289DD251969A26700A4B8FA /* main.m */; };
 		5289DD391969A26700A4B8FA /* Zumara-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD261969A26700A4B8FA /* Zumara-Info.plist */; };
 		5289DD3A1969A26700A4B8FA /* fajr.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD281969A26700A4B8FA /* fajr.caf */; };
+		52B5ADF91969AB93000522F6 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADEF1969AB93000522F6 /* Icon@2x.png */; };
+		52B5ADFA1969AB93000522F6 /* sign_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF01969AB93000522F6 /* sign_button@2x.png */; };
+		52B5ADFB1969AB93000522F6 /* alarm_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF11969AB93000522F6 /* alarm_icon@2x.png */; };
+		52B5ADFC1969AB93000522F6 /* background-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF21969AB93000522F6 /* background-568h@2x.png */; };
+		52B5ADFD1969AB93000522F6 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF31969AB93000522F6 /* background@2x.png */; };
+		52B5ADFE1969AB93000522F6 /* contact_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF41969AB93000522F6 /* contact_bg@2x.png */; };
+		52B5ADFF1969AB93000522F6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF51969AB93000522F6 /* Default-568h@2x.png */; };
+		52B5AE001969AB93000522F6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF61969AB93000522F6 /* Default@2x.png */; };
+		52B5AE011969AB93000522F6 /* facebook_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF71969AB93000522F6 /* facebook_icon@2x.png */; };
+		52B5AE021969AB93000522F6 /* AppStoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF81969AB93000522F6 /* AppStoreIcon.png */; };
+		52B5AE041969B181000522F6 /* awake_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5AE031969B181000522F6 /* awake_icon.png */; };
 		6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D10F48216DD68E000690A0F /* CoreLocation.framework */; };
 		C425016D161BBAE400474BCD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4250169161BBAE400474BCD /* StoreKit.framework */; };
 		C4250170161BBAEE00474BCD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C425016F161BBAEE00474BCD /* libz.dylib */; };
@@ -53,21 +55,23 @@
 		5289DD161969A26700A4B8FA /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 		5289DD171969A26700A4B8FA /* FriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewController.h; sourceTree = "<group>"; };
 		5289DD181969A26700A4B8FA /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewController.m; sourceTree = "<group>"; };
-		5289DD1A1969A26700A4B8FA /* alarm_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm_icon@2x.png"; sourceTree = "<group>"; };
-		5289DD1B1969A26700A4B8FA /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
-		5289DD1C1969A26700A4B8FA /* contact_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact_bg@2x.png"; sourceTree = "<group>"; };
-		5289DD1D1969A26700A4B8FA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		5289DD1E1969A26700A4B8FA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		5289DD1F1969A26700A4B8FA /* facebook_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_icon@2x.png"; sourceTree = "<group>"; };
-		5289DD201969A26700A4B8FA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		5289DD211969A26700A4B8FA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		5289DD221969A26700A4B8FA /* sign_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign_button@2x.png"; sourceTree = "<group>"; };
 		5289DD231969A26700A4B8FA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		5289DD241969A26700A4B8FA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		5289DD251969A26700A4B8FA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5289DD261969A26700A4B8FA /* Zumara-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Zumara-Info.plist"; sourceTree = "<group>"; };
 		5289DD271969A26700A4B8FA /* Zumara-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Zumara-Prefix.pch"; sourceTree = "<group>"; };
 		5289DD281969A26700A4B8FA /* fajr.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fajr.caf; sourceTree = "<group>"; };
+		52B5ADEF1969AB93000522F6 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		52B5ADF01969AB93000522F6 /* sign_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign_button@2x.png"; sourceTree = "<group>"; };
+		52B5ADF11969AB93000522F6 /* alarm_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm_icon@2x.png"; sourceTree = "<group>"; };
+		52B5ADF21969AB93000522F6 /* background-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-568h@2x.png"; sourceTree = "<group>"; };
+		52B5ADF31969AB93000522F6 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		52B5ADF41969AB93000522F6 /* contact_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact_bg@2x.png"; sourceTree = "<group>"; };
+		52B5ADF51969AB93000522F6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		52B5ADF61969AB93000522F6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		52B5ADF71969AB93000522F6 /* facebook_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_icon@2x.png"; sourceTree = "<group>"; };
+		52B5ADF81969AB93000522F6 /* AppStoreIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppStoreIcon.png; sourceTree = "<group>"; };
+		52B5AE031969B181000522F6 /* awake_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awake_icon.png; sourceTree = "<group>"; };
 		6D10F48216DD68E000690A0F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C4250169161BBAE400474BCD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C425016F161BBAEE00474BCD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -113,6 +117,8 @@
 			children = (
 				5289DD0E1969A26700A4B8FA /* AppDelegate.h */,
 				5289DD0F1969A26700A4B8FA /* AppDelegate.m */,
+				5289DD231969A26700A4B8FA /* LoginViewController.h */,
+				5289DD241969A26700A4B8FA /* LoginViewController.m */,
 				5289DD101969A26700A4B8FA /* Constants.h */,
 				5289DD111969A26700A4B8FA /* InfoPlist.strings */,
 				5289DD131969A26700A4B8FA /* Storyboard.storyboard */,
@@ -121,8 +127,6 @@
 				5289DD171969A26700A4B8FA /* FriendsTableViewController.h */,
 				5289DD181969A26700A4B8FA /* FriendsTableViewController.m */,
 				5289DD191969A26700A4B8FA /* Graphics */,
-				5289DD231969A26700A4B8FA /* LoginViewController.h */,
-				5289DD241969A26700A4B8FA /* LoginViewController.m */,
 				5289DD251969A26700A4B8FA /* main.m */,
 				5289DD261969A26700A4B8FA /* Zumara-Info.plist */,
 				5289DD271969A26700A4B8FA /* Zumara-Prefix.pch */,
@@ -133,15 +137,17 @@
 		5289DD191969A26700A4B8FA /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				5289DD1A1969A26700A4B8FA /* alarm_icon@2x.png */,
-				5289DD1B1969A26700A4B8FA /* background@2x.png */,
-				5289DD1C1969A26700A4B8FA /* contact_bg@2x.png */,
-				5289DD1D1969A26700A4B8FA /* Default-568h@2x.png */,
-				5289DD1E1969A26700A4B8FA /* Default@2x.png */,
-				5289DD1F1969A26700A4B8FA /* facebook_icon@2x.png */,
-				5289DD201969A26700A4B8FA /* Icon.png */,
-				5289DD211969A26700A4B8FA /* Icon@2x.png */,
-				5289DD221969A26700A4B8FA /* sign_button@2x.png */,
+				52B5ADEF1969AB93000522F6 /* Icon@2x.png */,
+				52B5AE031969B181000522F6 /* awake_icon.png */,
+				52B5ADF01969AB93000522F6 /* sign_button@2x.png */,
+				52B5ADF11969AB93000522F6 /* alarm_icon@2x.png */,
+				52B5ADF21969AB93000522F6 /* background-568h@2x.png */,
+				52B5ADF31969AB93000522F6 /* background@2x.png */,
+				52B5ADF41969AB93000522F6 /* contact_bg@2x.png */,
+				52B5ADF51969AB93000522F6 /* Default-568h@2x.png */,
+				52B5ADF61969AB93000522F6 /* Default@2x.png */,
+				52B5ADF71969AB93000522F6 /* facebook_icon@2x.png */,
+				52B5ADF81969AB93000522F6 /* AppStoreIcon.png */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -235,19 +241,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5289DD361969A26700A4B8FA /* sign_button@2x.png in Resources */,
-				5289DD341969A26700A4B8FA /* Icon.png in Resources */,
-				5289DD2E1969A26700A4B8FA /* alarm_icon@2x.png in Resources */,
+				52B5AE001969AB93000522F6 /* Default@2x.png in Resources */,
 				5289DD2A1969A26700A4B8FA /* InfoPlist.strings in Resources */,
+				52B5AE021969AB93000522F6 /* AppStoreIcon.png in Resources */,
+				52B5ADFF1969AB93000522F6 /* Default-568h@2x.png in Resources */,
 				5289DD391969A26700A4B8FA /* Zumara-Info.plist in Resources */,
-				5289DD2F1969A26700A4B8FA /* background@2x.png in Resources */,
-				5289DD331969A26700A4B8FA /* facebook_icon@2x.png in Resources */,
-				5289DD301969A26700A4B8FA /* contact_bg@2x.png in Resources */,
 				5289DD2B1969A26700A4B8FA /* Storyboard.storyboard in Resources */,
-				5289DD321969A26700A4B8FA /* Default@2x.png in Resources */,
+				52B5ADFC1969AB93000522F6 /* background-568h@2x.png in Resources */,
+				52B5AE041969B181000522F6 /* awake_icon.png in Resources */,
+				52B5ADFA1969AB93000522F6 /* sign_button@2x.png in Resources */,
+				52B5AE011969AB93000522F6 /* facebook_icon@2x.png in Resources */,
+				52B5ADFB1969AB93000522F6 /* alarm_icon@2x.png in Resources */,
 				5289DD3A1969A26700A4B8FA /* fajr.caf in Resources */,
-				5289DD311969A26700A4B8FA /* Default-568h@2x.png in Resources */,
-				5289DD351969A26700A4B8FA /* Icon@2x.png in Resources */,
+				52B5ADFD1969AB93000522F6 /* background@2x.png in Resources */,
+				52B5ADFE1969AB93000522F6 /* contact_bg@2x.png in Resources */,
+				52B5ADF91969AB93000522F6 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +328,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "D5A24CAE-620A-4A84-9735-7C63E0D1BE38";
+				PROVISIONING_PROFILE = "CB104B47-914C-41BE-9031-C7E21426B14F";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -350,7 +358,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "D5A24CAE-620A-4A84-9735-7C63E0D1BE38";
+				PROVISIONING_PROFILE = "CB104B47-914C-41BE-9031-C7E21426B14F";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -372,7 +380,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Zumara;
-				PROVISIONING_PROFILE = "D5A24CAE-620A-4A84-9735-7C63E0D1BE38";
+				PROVISIONING_PROFILE = "CB104B47-914C-41BE-9031-C7E21426B14F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -393,7 +401,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Zumara;
-				PROVISIONING_PROFILE = "D5A24CAE-620A-4A84-9735-7C63E0D1BE38";
+				PROVISIONING_PROFILE = "CB104B47-914C-41BE-9031-C7E21426B14F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
