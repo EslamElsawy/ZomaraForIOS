@@ -17,13 +17,13 @@
 		5263C25A19572F3A00B51A81 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C24919572F3A00B51A81 /* LoginViewController.m */; };
 		528509FB195C54A400962962 /* alarm_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509EB195C54A400962962 /* alarm_icon@2x.png */; };
 		528509FC195C54A400962962 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509EC195C54A400962962 /* background@2x.png */; };
-		528509FD195C54A400962962 /* background_intro@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509ED195C54A400962962 /* background_intro@2x.png */; };
+		528509FD195C54A400962962 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509ED195C54A400962962 /* Default@2x.png */; };
 		528509FE195C54A400962962 /* contact_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509EE195C54A400962962 /* contact_bg@2x.png */; };
 		52850A02195C54A400962962 /* facebook_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509F2195C54A400962962 /* facebook_icon@2x.png */; };
 		52850A03195C54A400962962 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509F3195C54A400962962 /* Icon.png */; };
 		52850A04195C54A400962962 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509F4195C54A400962962 /* Icon@2x.png */; };
 		52850A0A195C54A400962962 /* sign_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509FA195C54A400962962 /* sign_button@2x.png */; };
-		52850A0C195C635F00962962 /* background_intro-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52850A0B195C635F00962962 /* background_intro-568h@2x.png */; };
+		52850A0C195C635F00962962 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52850A0B195C635F00962962 /* Default-568h@2x.png */; };
 		52D5C82E195B271F000AED92 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5C82D195B271F000AED92 /* FriendCell.m */; };
 		6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D10F48216DD68E000690A0F /* CoreLocation.framework */; };
 		C425016D161BBAE400474BCD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4250169161BBAE400474BCD /* StoreKit.framework */; };
@@ -48,6 +48,7 @@
 		522F2F13191508E600A96B7C /* Zomara-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Zomara-Prefix.pch"; path = "Zomara/Zomara-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		5235E41B195C85FB00BF37E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
 		524565091959E62000602C6D /* fajr.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fajr.caf; sourceTree = SOURCE_ROOT; };
+		524B483D196992AB00D65285 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Zomara/Constants.h; sourceTree = SOURCE_ROOT; };
 		5263C23B19572F3A00B51A81 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Zomara/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		5263C23C19572F3A00B51A81 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Zomara/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		5263C24019572F3A00B51A81 /* FriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsTableViewController.h; path = Zomara/FriendsTableViewController.h; sourceTree = SOURCE_ROOT; };
@@ -56,13 +57,13 @@
 		5263C24919572F3A00B51A81 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Zomara/LoginViewController.m; sourceTree = SOURCE_ROOT; };
 		528509EB195C54A400962962 /* alarm_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm_icon@2x.png"; sourceTree = "<group>"; };
 		528509EC195C54A400962962 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
-		528509ED195C54A400962962 /* background_intro@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_intro@2x.png"; sourceTree = "<group>"; };
+		528509ED195C54A400962962 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		528509EE195C54A400962962 /* contact_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact_bg@2x.png"; sourceTree = "<group>"; };
 		528509F2195C54A400962962 /* facebook_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_icon@2x.png"; sourceTree = "<group>"; };
 		528509F3195C54A400962962 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		528509F4195C54A400962962 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		528509FA195C54A400962962 /* sign_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign_button@2x.png"; sourceTree = "<group>"; };
-		52850A0B195C635F00962962 /* background_intro-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_intro-568h@2x.png"; sourceTree = "<group>"; };
+		52850A0B195C635F00962962 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		52D5C82C195B271F000AED92 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendCell.h; path = Zomara/FriendCell.h; sourceTree = SOURCE_ROOT; };
 		52D5C82D195B271F000AED92 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendCell.m; path = Zomara/FriendCell.m; sourceTree = SOURCE_ROOT; };
 		6D10F48216DD68E000690A0F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -119,8 +120,8 @@
 			children = (
 				528509EB195C54A400962962 /* alarm_icon@2x.png */,
 				528509EC195C54A400962962 /* background@2x.png */,
-				528509ED195C54A400962962 /* background_intro@2x.png */,
-				52850A0B195C635F00962962 /* background_intro-568h@2x.png */,
+				528509ED195C54A400962962 /* Default@2x.png */,
+				52850A0B195C635F00962962 /* Default-568h@2x.png */,
 				528509EE195C54A400962962 /* contact_bg@2x.png */,
 				528509FA195C54A400962962 /* sign_button@2x.png */,
 				528509F2195C54A400962962 /* facebook_icon@2x.png */,
@@ -172,6 +173,7 @@
 		D4DA79F414D3345A0055F672 /* Zomara */ = {
 			isa = PBXGroup;
 			children = (
+				524B483D196992AB00D65285 /* Constants.h */,
 				5263C23B19572F3A00B51A81 /* AppDelegate.h */,
 				5263C23C19572F3A00B51A81 /* AppDelegate.m */,
 				5263C24819572F3A00B51A81 /* LoginViewController.h */,
@@ -250,7 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52850A0C195C635F00962962 /* background_intro-568h@2x.png in Resources */,
+				52850A0C195C635F00962962 /* Default-568h@2x.png in Resources */,
 				528509FB195C54A400962962 /* alarm_icon@2x.png in Resources */,
 				52850A04195C54A400962962 /* Icon@2x.png in Resources */,
 				528509FC195C54A400962962 /* background@2x.png in Resources */,
@@ -258,7 +260,7 @@
 				52850A02195C54A400962962 /* facebook_icon@2x.png in Resources */,
 				5235E41A195C85FB00BF37E8 /* Storyboard.storyboard in Resources */,
 				52850A0A195C54A400962962 /* sign_button@2x.png in Resources */,
-				528509FD195C54A400962962 /* background_intro@2x.png in Resources */,
+				528509FD195C54A400962962 /* Default@2x.png in Resources */,
 				52850A03195C54A400962962 /* Icon.png in Resources */,
 				528509FE195C54A400962962 /* contact_bg@2x.png in Resources */,
 			);

@@ -96,13 +96,13 @@
             NSString *facebookName = userData[@"name"];
             NSString *facebookLink = userData[@"link"];
 
-            [[PFUser currentUser] setObject:facebookID forKey:@"facebookId"];
-            [[PFUser currentUser] setObject:facebookName forKey:@"facebookName"];
-            [[PFUser currentUser] setObject:facebookLink forKey:@"facebookLink"];
+            [[PFUser currentUser] setObject:facebookID forKey:FACEBOOK_ID];
+            [[PFUser currentUser] setObject:facebookName forKey:FACEBOOK_NAME];
+            [[PFUser currentUser] setObject:facebookLink forKey:FACEBOOK_LINK];
             [[PFUser currentUser] saveInBackground];
             
-            [[PFInstallation currentInstallation] setObject:facebookID forKey:@"facebookId"];
-            [[PFInstallation currentInstallation] setObject:facebookName forKey:@"facebookName"];
+            [[PFInstallation currentInstallation] setObject:facebookID forKey:FACEBOOK_ID];
+            [[PFInstallation currentInstallation] setObject:facebookName forKey:FACEBOOK_NAME];
             [[PFInstallation currentInstallation] saveInBackground];
         }else{
             NSLog(@"Error update user data on parse %@",[error description]);

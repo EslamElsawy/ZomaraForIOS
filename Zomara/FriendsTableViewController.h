@@ -13,4 +13,6 @@
 
 @property NSArray * friends;
 
+- (IBAction)awake:(id)sender;
+
 @end

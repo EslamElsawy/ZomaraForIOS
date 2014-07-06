@@ -17,8 +17,8 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
 
-    self.nameLabel.text = self.zomaraFriend[@"name"];;
-    self.profilePictureView.profileID = self.zomaraFriend[@"id"];
+    self.nameLabel.text = self.zomaraFriend[FACEBOOK_NAME];
+    self.profilePictureView.profileID = self.zomaraFriend[FACEBOOK_ID];
     self.profilePictureView.layer.cornerRadius = 38;
 }
 

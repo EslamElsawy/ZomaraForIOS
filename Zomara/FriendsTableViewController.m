@@ -44,14 +44,13 @@
             [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,NSError *error) {
                 if(!error){
                     NSArray *data = [result objectForKey:@"data"];                    
-                    self.friends = data;
-                    [self.tableView reloadData];
+                    [self filterAwakenFriends:data];
                 }else{
                     NSLog(@"Uh oh. An error occurred: %@", error);
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch Friends Error" message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
                     [alert show];
+                    [self.refreshControl endRefreshing];
                 }
-                [self.refreshControl endRefreshing];
             }];
         }
     }];
@@ -89,17 +88,19 @@
 
     NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
     PFUser * zomaraFriend = self.friends[indexPath.row];
-    NSString * name = zomaraFriend[@"name"];
+    NSString * name = zomaraFriend[FACEBOOK_NAME];
     NSLog(@"wake %@",name);
     
     // Create our Installation query
     PFQuery *pushQuery = [PFInstallation query];
-    [pushQuery whereKey:@"facebookId" equalTo:zomaraFriend[@"id"]];
+    [pushQuery whereKey:FACEBOOK_ID equalTo:zomaraFriend[FACEBOOK_ID]];
     
     NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
                           @"الصلاة خير من النوم", @"alert",
                           @"Increment", @"badge",
-                          @"fajr.caf", @"sound",
+                          @"fajr.caf", @"sound",                                                              @"alarm",@"type",
+                          zomaraFriend[FACEBOOK_ID],@"fromId",
+                          zomaraFriend[FACEBOOK_NAME],@"fromUser",
                           nil];
     PFPush *push = [[PFPush alloc] init];
     [push setQuery:pushQuery];
@@ -108,5 +109,42 @@
     
 }
 
+- (void)awake:(id)sender{
+    
+    [[PFUser currentUser] setObject:[NSDate date] forKey:LAST_AWAKEN_AT];
+    [[PFUser currentUser] saveInBackground];
 
+}
+
+
+- (void)filterAwakenFriends:(NSArray*)allFriends
+{
+    NSArray * friendsFacebookIDs = [allFriends valueForKey:@"id"];
+    //Create query for all Post object by the current user
+    PFQuery *userQuery = [PFUser query];
+    [userQuery whereKey:FACEBOOK_ID containedIn:friendsFacebookIDs];
+    
+    // Run the query
+    [userQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            //Save results and update the table
+            NSMutableArray * awakenFriends = [NSMutableArray array];
+            for(PFUser * friend in objects){
+                
+                NSDate * lastAwakenAt = friend[LAST_AWAKEN_AT];
+                if(!lastAwakenAt){
+                    [awakenFriends addObject:friend];
+                }
+                
+                NSInteger hoursBeenAwaken = [[NSDate date]timeIntervalSinceDate:lastAwakenAt]/3600;
+                if(hoursBeenAwaken>4){
+                    [awakenFriends addObject:friend];
+                }
+            }
+            self.friends = awakenFriends;
+            [self.tableView reloadData];
+        }
+        [self.refreshControl endRefreshing];
+    }];
+}
 @end

@@ -19,3 +19,5 @@
 #define IS_IPOD   ( [ [ [ UIDevice currentDevice ] model ] isEqualToString: @"iPod touch" ] )
 
 #define IS_IPHONE_5 ( IS_IPHONE && IS_WIDESCREEN )
+
+#import "Constants.h"

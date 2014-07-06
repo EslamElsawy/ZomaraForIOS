@@ -32,9 +32,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_intro.png" id="0Aq-1c-Gpa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default.png" id="0Aq-1c-Gpa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="D3W-Ns-yVw">
                                 <rect key="frame" x="102" y="474" width="165" height="36"/>
@@ -151,7 +151,13 @@ EE11aGFtbWFkIEhhc3NhbiBOYXNyIEVsZGluA
                             <outlet property="delegate" destination="WSu-fM-liS" id="Lni-AO-pPV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Wakeup Your Friends" id="rP3-mg-S0p"/>
+                    <navigationItem key="navigationItem" title="Wakeup Your Friends" id="rP3-mg-S0p">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6GV-bh-299">
+                            <connections>
+                                <action selector="awake:" destination="WSu-fM-liS" id="9tF-p9-Z92"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZH6-ud-g9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -159,8 +165,8 @@ EE11aGFtbWFkIEhhc3NhbiBOYXNyIEVsZGluA
         </scene>
     </scenes>
     <resources>
+        <image name="Default.png" width="320" height="480"/>
         <image name="alarm_icon.png" width="63" height="63"/>
-        <image name="background_intro.png" width="320" height="480"/>
         <image name="contact_bg.png" width="78" height="78"/>
         <image name="facebook_icon.png" width="62" height="62"/>
         <image name="sign_button.png" width="166" height="35"/>
