@@ -1,6 +1,6 @@
 //
 //  FriendsTableViewController.m
-//  Zomara
+//  Zumara
 //
 //  Created by Muhammad Hassan Nasr on 6/10/14.
 //
@@ -78,7 +78,7 @@
     FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FRIEND_CELL_ID" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.zomaraFriend = self.friends[indexPath.row];
+    cell.zumaraFriend = self.friends[indexPath.row];
    
     return cell;
 }
@@ -87,20 +87,20 @@
 - (void) alarmButtonTouchedOnCell:(UITableViewCell*) cell{
 
     NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
-    PFUser * zomaraFriend = self.friends[indexPath.row];
-    NSString * name = zomaraFriend[FACEBOOK_NAME];
+    PFUser * zumaraFriend = self.friends[indexPath.row];
+    NSString * name = zumaraFriend[FACEBOOK_NAME];
     NSLog(@"wake %@",name);
     
     // Create our Installation query
     PFQuery *pushQuery = [PFInstallation query];
-    [pushQuery whereKey:FACEBOOK_ID equalTo:zomaraFriend[FACEBOOK_ID]];
+    [pushQuery whereKey:FACEBOOK_ID equalTo:zumaraFriend[FACEBOOK_ID]];
     
     NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
                           @"الصلاة خير من النوم", @"alert",
                           @"Increment", @"badge",
                           @"fajr.caf", @"sound",                                                              @"alarm",@"type",
-                          zomaraFriend[FACEBOOK_ID],@"fromId",
-                          zomaraFriend[FACEBOOK_NAME],@"fromUser",
+                          zumaraFriend[FACEBOOK_ID],@"fromId",
+                          zumaraFriend[FACEBOOK_NAME],@"fromUser",
                           nil];
     PFPush *push = [[PFPush alloc] init];
     [push setQuery:pushQuery];

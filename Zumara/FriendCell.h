@@ -1,6 +1,6 @@
 //
 //  FriendCell.h
-//  Zomara
+//  Zumara
 //
 //  Created by Muhammad Hassan Nasr on 6/25/14.
 //
@@ -22,7 +22,7 @@
 @property(strong,nonatomic) IBOutlet UILabel * nameLabel;
 @property(weak,nonatomic)  IBOutlet id<FriendCellDelegate> delegate;
 
-@property(strong) PFUser * zomaraFriend ;
+@property(strong) PFUser * zumaraFriend ;
 
 -  (IBAction) alarmButtonTouched;
 

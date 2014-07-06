@@ -1,6 +1,6 @@
 //
 //  FriendCell.m
-//  Zomara
+//  Zumara
 //
 //  Created by Muhammad Hassan Nasr on 6/25/14.
 //
@@ -17,8 +17,8 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
 
-    self.nameLabel.text = self.zomaraFriend[FACEBOOK_NAME];
-    self.profilePictureView.profileID = self.zomaraFriend[FACEBOOK_ID];
+    self.nameLabel.text = self.zumaraFriend[FACEBOOK_NAME];
+    self.profilePictureView.profileID = self.zumaraFriend[FACEBOOK_ID];
     self.profilePictureView.layer.cornerRadius = 38;
 }
 

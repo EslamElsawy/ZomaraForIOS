@@ -9,22 +9,24 @@
 /* Begin PBXBuildFile section */
 		30C949AC1829561000B17666 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C949AB1829561000B17666 /* FacebookSDK.framework */; };
 		30C949AE1829561800B17666 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C949AD1829561800B17666 /* Parse.framework */; };
-		522F2F21191508E600A96B7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F2F0D191508E600A96B7C /* main.m */; };
-		5235E41A195C85FB00BF37E8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5235E41C195C85FB00BF37E8 /* Storyboard.storyboard */; };
-		5245650A1959E72300602C6D /* fajr.caf in Resources */ = {isa = PBXBuildFile; fileRef = 524565091959E62000602C6D /* fajr.caf */; };
-		5263C24F19572F3A00B51A81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C23C19572F3A00B51A81 /* AppDelegate.m */; };
-		5263C25319572F3A00B51A81 /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C24119572F3A00B51A81 /* FriendsTableViewController.m */; };
-		5263C25A19572F3A00B51A81 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C24919572F3A00B51A81 /* LoginViewController.m */; };
-		528509FB195C54A400962962 /* alarm_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509EB195C54A400962962 /* alarm_icon@2x.png */; };
-		528509FC195C54A400962962 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509EC195C54A400962962 /* background@2x.png */; };
-		528509FD195C54A400962962 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509ED195C54A400962962 /* Default@2x.png */; };
-		528509FE195C54A400962962 /* contact_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509EE195C54A400962962 /* contact_bg@2x.png */; };
-		52850A02195C54A400962962 /* facebook_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509F2195C54A400962962 /* facebook_icon@2x.png */; };
-		52850A03195C54A400962962 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509F3195C54A400962962 /* Icon.png */; };
-		52850A04195C54A400962962 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509F4195C54A400962962 /* Icon@2x.png */; };
-		52850A0A195C54A400962962 /* sign_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528509FA195C54A400962962 /* sign_button@2x.png */; };
-		52850A0C195C635F00962962 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52850A0B195C635F00962962 /* Default-568h@2x.png */; };
-		52D5C82E195B271F000AED92 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D5C82D195B271F000AED92 /* FriendCell.m */; };
+		5289DD291969A26700A4B8FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5289DD0F1969A26700A4B8FA /* AppDelegate.m */; };
+		5289DD2A1969A26700A4B8FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD111969A26700A4B8FA /* InfoPlist.strings */; };
+		5289DD2B1969A26700A4B8FA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD131969A26700A4B8FA /* Storyboard.storyboard */; };
+		5289DD2C1969A26700A4B8FA /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5289DD161969A26700A4B8FA /* FriendCell.m */; };
+		5289DD2D1969A26700A4B8FA /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5289DD181969A26700A4B8FA /* FriendsTableViewController.m */; };
+		5289DD2E1969A26700A4B8FA /* alarm_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1A1969A26700A4B8FA /* alarm_icon@2x.png */; };
+		5289DD2F1969A26700A4B8FA /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1B1969A26700A4B8FA /* background@2x.png */; };
+		5289DD301969A26700A4B8FA /* contact_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1C1969A26700A4B8FA /* contact_bg@2x.png */; };
+		5289DD311969A26700A4B8FA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1D1969A26700A4B8FA /* Default-568h@2x.png */; };
+		5289DD321969A26700A4B8FA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1E1969A26700A4B8FA /* Default@2x.png */; };
+		5289DD331969A26700A4B8FA /* facebook_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD1F1969A26700A4B8FA /* facebook_icon@2x.png */; };
+		5289DD341969A26700A4B8FA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD201969A26700A4B8FA /* Icon.png */; };
+		5289DD351969A26700A4B8FA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD211969A26700A4B8FA /* Icon@2x.png */; };
+		5289DD361969A26700A4B8FA /* sign_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD221969A26700A4B8FA /* sign_button@2x.png */; };
+		5289DD371969A26700A4B8FA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5289DD241969A26700A4B8FA /* LoginViewController.m */; };
+		5289DD381969A26700A4B8FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5289DD251969A26700A4B8FA /* main.m */; };
+		5289DD391969A26700A4B8FA /* Zumara-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD261969A26700A4B8FA /* Zumara-Info.plist */; };
+		5289DD3A1969A26700A4B8FA /* fajr.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5289DD281969A26700A4B8FA /* fajr.caf */; };
 		6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D10F48216DD68E000690A0F /* CoreLocation.framework */; };
 		C425016D161BBAE400474BCD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4250169161BBAE400474BCD /* StoreKit.framework */; };
 		C4250170161BBAEE00474BCD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C425016F161BBAEE00474BCD /* libz.dylib */; };
@@ -42,34 +44,34 @@
 /* Begin PBXFileReference section */
 		30C949AB1829561000B17666 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		30C949AD1829561800B17666 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		522F2EFE191508E600A96B7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		522F2F0D191508E600A96B7C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Zomara/main.m; sourceTree = SOURCE_ROOT; };
-		522F2F12191508E600A96B7C /* Zomara-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Zomara-Info.plist"; path = "Zomara/Zomara-Info.plist"; sourceTree = SOURCE_ROOT; };
-		522F2F13191508E600A96B7C /* Zomara-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Zomara-Prefix.pch"; path = "Zomara/Zomara-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		5235E41B195C85FB00BF37E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
-		524565091959E62000602C6D /* fajr.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fajr.caf; sourceTree = SOURCE_ROOT; };
-		524B483D196992AB00D65285 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Zomara/Constants.h; sourceTree = SOURCE_ROOT; };
-		5263C23B19572F3A00B51A81 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Zomara/AppDelegate.h; sourceTree = SOURCE_ROOT; };
-		5263C23C19572F3A00B51A81 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Zomara/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		5263C24019572F3A00B51A81 /* FriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsTableViewController.h; path = Zomara/FriendsTableViewController.h; sourceTree = SOURCE_ROOT; };
-		5263C24119572F3A00B51A81 /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsTableViewController.m; path = Zomara/FriendsTableViewController.m; sourceTree = SOURCE_ROOT; };
-		5263C24819572F3A00B51A81 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Zomara/LoginViewController.h; sourceTree = SOURCE_ROOT; };
-		5263C24919572F3A00B51A81 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Zomara/LoginViewController.m; sourceTree = SOURCE_ROOT; };
-		528509EB195C54A400962962 /* alarm_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm_icon@2x.png"; sourceTree = "<group>"; };
-		528509EC195C54A400962962 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
-		528509ED195C54A400962962 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		528509EE195C54A400962962 /* contact_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact_bg@2x.png"; sourceTree = "<group>"; };
-		528509F2195C54A400962962 /* facebook_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_icon@2x.png"; sourceTree = "<group>"; };
-		528509F3195C54A400962962 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		528509F4195C54A400962962 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		528509FA195C54A400962962 /* sign_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign_button@2x.png"; sourceTree = "<group>"; };
-		52850A0B195C635F00962962 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		52D5C82C195B271F000AED92 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendCell.h; path = Zomara/FriendCell.h; sourceTree = SOURCE_ROOT; };
-		52D5C82D195B271F000AED92 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendCell.m; path = Zomara/FriendCell.m; sourceTree = SOURCE_ROOT; };
+		5289DD0E1969A26700A4B8FA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5289DD0F1969A26700A4B8FA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5289DD101969A26700A4B8FA /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		5289DD121969A26700A4B8FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5289DD141969A26700A4B8FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		5289DD151969A26700A4B8FA /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		5289DD161969A26700A4B8FA /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		5289DD171969A26700A4B8FA /* FriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewController.h; sourceTree = "<group>"; };
+		5289DD181969A26700A4B8FA /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewController.m; sourceTree = "<group>"; };
+		5289DD1A1969A26700A4B8FA /* alarm_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm_icon@2x.png"; sourceTree = "<group>"; };
+		5289DD1B1969A26700A4B8FA /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		5289DD1C1969A26700A4B8FA /* contact_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact_bg@2x.png"; sourceTree = "<group>"; };
+		5289DD1D1969A26700A4B8FA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5289DD1E1969A26700A4B8FA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5289DD1F1969A26700A4B8FA /* facebook_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_icon@2x.png"; sourceTree = "<group>"; };
+		5289DD201969A26700A4B8FA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		5289DD211969A26700A4B8FA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		5289DD221969A26700A4B8FA /* sign_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign_button@2x.png"; sourceTree = "<group>"; };
+		5289DD231969A26700A4B8FA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5289DD241969A26700A4B8FA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5289DD251969A26700A4B8FA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5289DD261969A26700A4B8FA /* Zumara-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Zumara-Info.plist"; sourceTree = "<group>"; };
+		5289DD271969A26700A4B8FA /* Zumara-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Zumara-Prefix.pch"; sourceTree = "<group>"; };
+		5289DD281969A26700A4B8FA /* fajr.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fajr.caf; sourceTree = "<group>"; };
 		6D10F48216DD68E000690A0F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C4250169161BBAE400474BCD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C425016F161BBAEE00474BCD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		D4DA79EA14D3345A0055F672 /* Zomara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zomara.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4DA79EA14D3345A0055F672 /* Zumara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zumara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DA79EE14D3345A0055F672 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4DA79F014D3345A0055F672 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D4DA79F214D3345A0055F672 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,36 +108,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		522F2EFC191508E600A96B7C /* en.lproj */ = {
+		5289DD0D1969A26700A4B8FA /* Zumara */ = {
 			isa = PBXGroup;
 			children = (
-				522F2EFD191508E600A96B7C /* InfoPlist.strings */,
+				5289DD0E1969A26700A4B8FA /* AppDelegate.h */,
+				5289DD0F1969A26700A4B8FA /* AppDelegate.m */,
+				5289DD101969A26700A4B8FA /* Constants.h */,
+				5289DD111969A26700A4B8FA /* InfoPlist.strings */,
+				5289DD131969A26700A4B8FA /* Storyboard.storyboard */,
+				5289DD151969A26700A4B8FA /* FriendCell.h */,
+				5289DD161969A26700A4B8FA /* FriendCell.m */,
+				5289DD171969A26700A4B8FA /* FriendsTableViewController.h */,
+				5289DD181969A26700A4B8FA /* FriendsTableViewController.m */,
+				5289DD191969A26700A4B8FA /* Graphics */,
+				5289DD231969A26700A4B8FA /* LoginViewController.h */,
+				5289DD241969A26700A4B8FA /* LoginViewController.m */,
+				5289DD251969A26700A4B8FA /* main.m */,
+				5289DD261969A26700A4B8FA /* Zumara-Info.plist */,
+				5289DD271969A26700A4B8FA /* Zumara-Prefix.pch */,
 			);
-			name = en.lproj;
-			path = Zomara/en.lproj;
-			sourceTree = SOURCE_ROOT;
+			path = Zumara;
+			sourceTree = "<group>";
 		};
-		528509EA195C54A400962962 /* Graphics */ = {
+		5289DD191969A26700A4B8FA /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				528509EB195C54A400962962 /* alarm_icon@2x.png */,
-				528509EC195C54A400962962 /* background@2x.png */,
-				528509ED195C54A400962962 /* Default@2x.png */,
-				52850A0B195C635F00962962 /* Default-568h@2x.png */,
-				528509EE195C54A400962962 /* contact_bg@2x.png */,
-				528509FA195C54A400962962 /* sign_button@2x.png */,
-				528509F2195C54A400962962 /* facebook_icon@2x.png */,
-				528509F3195C54A400962962 /* Icon.png */,
-				528509F4195C54A400962962 /* Icon@2x.png */,
+				5289DD1A1969A26700A4B8FA /* alarm_icon@2x.png */,
+				5289DD1B1969A26700A4B8FA /* background@2x.png */,
+				5289DD1C1969A26700A4B8FA /* contact_bg@2x.png */,
+				5289DD1D1969A26700A4B8FA /* Default-568h@2x.png */,
+				5289DD1E1969A26700A4B8FA /* Default@2x.png */,
+				5289DD1F1969A26700A4B8FA /* facebook_icon@2x.png */,
+				5289DD201969A26700A4B8FA /* Icon.png */,
+				5289DD211969A26700A4B8FA /* Icon@2x.png */,
+				5289DD221969A26700A4B8FA /* sign_button@2x.png */,
 			);
-			name = Graphics;
-			path = Zomara/Graphics;
-			sourceTree = SOURCE_ROOT;
+			path = Graphics;
+			sourceTree = "<group>";
 		};
 		D4DA79DF14D3345A0055F672 = {
 			isa = PBXGroup;
 			children = (
-				D4DA79F414D3345A0055F672 /* Zomara */,
+				5289DD0D1969A26700A4B8FA /* Zumara */,
+				5289DD281969A26700A4B8FA /* fajr.caf */,
 				D4DA79ED14D3345A0055F672 /* Frameworks */,
 				D4DA79EB14D3345A0055F672 /* Products */,
 			);
@@ -144,7 +159,7 @@
 		D4DA79EB14D3345A0055F672 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4DA79EA14D3345A0055F672 /* Zomara.app */,
+				D4DA79EA14D3345A0055F672 /* Zumara.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,44 +185,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D4DA79F414D3345A0055F672 /* Zomara */ = {
-			isa = PBXGroup;
-			children = (
-				524B483D196992AB00D65285 /* Constants.h */,
-				5263C23B19572F3A00B51A81 /* AppDelegate.h */,
-				5263C23C19572F3A00B51A81 /* AppDelegate.m */,
-				5263C24819572F3A00B51A81 /* LoginViewController.h */,
-				5263C24919572F3A00B51A81 /* LoginViewController.m */,
-				5263C24019572F3A00B51A81 /* FriendsTableViewController.h */,
-				5263C24119572F3A00B51A81 /* FriendsTableViewController.m */,
-				52D5C82C195B271F000AED92 /* FriendCell.h */,
-				52D5C82D195B271F000AED92 /* FriendCell.m */,
-				5235E41C195C85FB00BF37E8 /* Storyboard.storyboard */,
-				528509EA195C54A400962962 /* Graphics */,
-				522F2EFC191508E600A96B7C /* en.lproj */,
-				D4DA79F514D3345A0055F672 /* Supporting Files */,
-			);
-			name = Zomara;
-			path = IntegratingFacebookTutorial;
-			sourceTree = "<group>";
-		};
-		D4DA79F514D3345A0055F672 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				524565091959E62000602C6D /* fajr.caf */,
-				522F2F0D191508E600A96B7C /* main.m */,
-				522F2F12191508E600A96B7C /* Zomara-Info.plist */,
-				522F2F13191508E600A96B7C /* Zomara-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D4DA79E914D3345A0055F672 /* Zomara */ = {
+		D4DA79E914D3345A0055F672 /* Zumara */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4DA7A0214D3345A0055F672 /* Build configuration list for PBXNativeTarget "Zomara" */;
+			buildConfigurationList = D4DA7A0214D3345A0055F672 /* Build configuration list for PBXNativeTarget "Zumara" */;
 			buildPhases = (
 				D4DA79E614D3345A0055F672 /* Sources */,
 				D4DA79E714D3345A0055F672 /* Frameworks */,
@@ -217,9 +200,9 @@
 			);
 			dependencies = (
 			);
-			name = Zomara;
+			name = Zumara;
 			productName = IntegratingFacebookTutorial;
-			productReference = D4DA79EA14D3345A0055F672 /* Zomara.app */;
+			productReference = D4DA79EA14D3345A0055F672 /* Zumara.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -230,7 +213,7 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = D4DA79E414D3345A0055F672 /* Build configuration list for PBXProject "Zomara" */;
+			buildConfigurationList = D4DA79E414D3345A0055F672 /* Build configuration list for PBXProject "Zumara" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -242,7 +225,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4DA79E914D3345A0055F672 /* Zomara */,
+				D4DA79E914D3345A0055F672 /* Zumara */,
 			);
 		};
 /* End PBXProject section */
@@ -252,17 +235,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52850A0C195C635F00962962 /* Default-568h@2x.png in Resources */,
-				528509FB195C54A400962962 /* alarm_icon@2x.png in Resources */,
-				52850A04195C54A400962962 /* Icon@2x.png in Resources */,
-				528509FC195C54A400962962 /* background@2x.png in Resources */,
-				5245650A1959E72300602C6D /* fajr.caf in Resources */,
-				52850A02195C54A400962962 /* facebook_icon@2x.png in Resources */,
-				5235E41A195C85FB00BF37E8 /* Storyboard.storyboard in Resources */,
-				52850A0A195C54A400962962 /* sign_button@2x.png in Resources */,
-				528509FD195C54A400962962 /* Default@2x.png in Resources */,
-				52850A03195C54A400962962 /* Icon.png in Resources */,
-				528509FE195C54A400962962 /* contact_bg@2x.png in Resources */,
+				5289DD361969A26700A4B8FA /* sign_button@2x.png in Resources */,
+				5289DD341969A26700A4B8FA /* Icon.png in Resources */,
+				5289DD2E1969A26700A4B8FA /* alarm_icon@2x.png in Resources */,
+				5289DD2A1969A26700A4B8FA /* InfoPlist.strings in Resources */,
+				5289DD391969A26700A4B8FA /* Zumara-Info.plist in Resources */,
+				5289DD2F1969A26700A4B8FA /* background@2x.png in Resources */,
+				5289DD331969A26700A4B8FA /* facebook_icon@2x.png in Resources */,
+				5289DD301969A26700A4B8FA /* contact_bg@2x.png in Resources */,
+				5289DD2B1969A26700A4B8FA /* Storyboard.storyboard in Resources */,
+				5289DD321969A26700A4B8FA /* Default@2x.png in Resources */,
+				5289DD3A1969A26700A4B8FA /* fajr.caf in Resources */,
+				5289DD311969A26700A4B8FA /* Default-568h@2x.png in Resources */,
+				5289DD351969A26700A4B8FA /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,33 +258,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5263C25A19572F3A00B51A81 /* LoginViewController.m in Sources */,
-				5263C25319572F3A00B51A81 /* FriendsTableViewController.m in Sources */,
-				52D5C82E195B271F000AED92 /* FriendCell.m in Sources */,
-				5263C24F19572F3A00B51A81 /* AppDelegate.m in Sources */,
-				522F2F21191508E600A96B7C /* main.m in Sources */,
+				5289DD381969A26700A4B8FA /* main.m in Sources */,
+				5289DD371969A26700A4B8FA /* LoginViewController.m in Sources */,
+				5289DD2D1969A26700A4B8FA /* FriendsTableViewController.m in Sources */,
+				5289DD291969A26700A4B8FA /* AppDelegate.m in Sources */,
+				5289DD2C1969A26700A4B8FA /* FriendCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		522F2EFD191508E600A96B7C /* InfoPlist.strings */ = {
+		5289DD111969A26700A4B8FA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				522F2EFE191508E600A96B7C /* en */,
+				5289DD121969A26700A4B8FA /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		5235E41C195C85FB00BF37E8 /* Storyboard.storyboard */ = {
+		5289DD131969A26700A4B8FA /* Storyboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5235E41B195C85FB00BF37E8 /* en */,
+				5289DD141969A26700A4B8FA /* en */,
 			);
 			name = Storyboard.storyboard;
-			path = Zomara;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
@@ -381,13 +365,13 @@
 					"$(SRCROOT)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Zomara/Zomara-Prefix.pch";
-				INFOPLIST_FILE = "Zomara/Zomara-Info.plist";
+				GCC_PREFIX_HEADER = "Zumara/Zumara-Prefix.pch";
+				INFOPLIST_FILE = "Zumara/Zumara-Info.plist";
 				OTHER_LDFLAGS = (
 					"-lsqlite3.0",
 					"-ObjC",
 				);
-				PRODUCT_NAME = Zomara;
+				PRODUCT_NAME = Zumara;
 				PROVISIONING_PROFILE = "D5A24CAE-620A-4A84-9735-7C63E0D1BE38";
 				WRAPPER_EXTENSION = app;
 			};
@@ -402,13 +386,13 @@
 					"$(SRCROOT)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Zomara/Zomara-Prefix.pch";
-				INFOPLIST_FILE = "Zomara/Zomara-Info.plist";
+				GCC_PREFIX_HEADER = "Zumara/Zumara-Prefix.pch";
+				INFOPLIST_FILE = "Zumara/Zumara-Info.plist";
 				OTHER_LDFLAGS = (
 					"-lsqlite3.0",
 					"-ObjC",
 				);
-				PRODUCT_NAME = Zomara;
+				PRODUCT_NAME = Zumara;
 				PROVISIONING_PROFILE = "D5A24CAE-620A-4A84-9735-7C63E0D1BE38";
 				WRAPPER_EXTENSION = app;
 			};
@@ -417,7 +401,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D4DA79E414D3345A0055F672 /* Build configuration list for PBXProject "Zomara" */ = {
+		D4DA79E414D3345A0055F672 /* Build configuration list for PBXProject "Zumara" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4DA7A0014D3345A0055F672 /* Debug */,
@@ -426,7 +410,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4DA7A0214D3345A0055F672 /* Build configuration list for PBXNativeTarget "Zomara" */ = {
+		D4DA7A0214D3345A0055F672 /* Build configuration list for PBXNativeTarget "Zumara" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4DA7A0314D3345A0055F672 /* Debug */,
