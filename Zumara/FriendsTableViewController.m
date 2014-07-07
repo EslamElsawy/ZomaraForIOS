@@ -30,6 +30,7 @@
     [self setRefreshControl:refreshControl];
     refreshControl.layer.zPosition += 1;
 
+    self.awakeButton.enabled = YES;
     [self refresh];
     
 }
@@ -109,19 +110,19 @@
     [push setQuery:pushQuery];
     [push setData:data];
     [push sendPushInBackground];
-    
+   
 }
 
 - (void)awake:(id)sender{
     
     [[PFUser currentUser] setObject:[NSDate date] forKey:LAST_AWAKEN_AT];
     [[PFUser currentUser] saveInBackground];
+    
+    self.awakeButton.enabled = NO;
 
 }
 
-
-- (void)filterAwakenFriends:(NSArray*)allFriends
-{
+- (void)filterAwakenFriends:(NSArray*)allFriends{
     NSArray * friendsFacebookIDs = [allFriends valueForKey:@"id"];
     //Create query for all Post object by the current user
     PFQuery *userQuery = [PFUser query];

@@ -12,6 +12,7 @@
 @interface FriendsTableViewController : UITableViewController<FriendCellDelegate>
 
 @property NSArray * friends;
+@property(strong,nonatomic) IBOutlet UIBarButtonItem * awakeButton;
 
 - (IBAction)awake:(id)sender;
 

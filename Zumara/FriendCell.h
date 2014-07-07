@@ -20,6 +20,8 @@
 
 @property(strong,nonatomic) IBOutlet FBProfilePictureView * profilePictureView;
 @property(strong,nonatomic) IBOutlet UILabel * nameLabel;
+@property(strong,nonatomic) IBOutlet UIButton * alarmButton;
+
 @property(weak,nonatomic)  IBOutlet id<FriendCellDelegate> delegate;
 
 @property(strong) PFUser * zumaraFriend ;

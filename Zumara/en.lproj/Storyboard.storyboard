@@ -106,7 +106,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="r4w-F4-vts">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="r4w-F4-vts" userLabel="Alarm Button">
                                             <rect key="frame" x="245" y="18" width="63" height="63"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="alarm_icon.png">
@@ -140,6 +140,7 @@ EE11aGFtbWFkIEhhc3NhbiBOYXNyIEVsZGluA
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="alarmButton" destination="r4w-F4-vts" id="OtK-14-9em"/>
                                     <outlet property="delegate" destination="WSu-fM-liS" id="Fcm-KP-SGG"/>
                                     <outlet property="nameLabel" destination="jfD-8R-maA" id="GKi-OB-zST"/>
                                     <outlet property="profilePictureView" destination="hWA-0o-vuC" id="oyo-Lj-k3v"/>
@@ -158,6 +159,9 @@ EE11aGFtbWFkIEhhc3NhbiBOYXNyIEVsZGluA
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="awakeButton" destination="6GV-bh-299" id="8cK-ec-Fel"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZH6-ud-g9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
