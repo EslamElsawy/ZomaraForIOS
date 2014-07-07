@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="D3W-Ns-yVw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="tailTruncation" id="D3W-Ns-yVw">
                                 <rect key="frame" x="102" y="386" width="165" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -81,8 +81,8 @@
                     <connections>
                         <outlet property="activityIndicator" destination="lXN-7A-Bxx" id="3MG-1D-zsJ"/>
                         <outlet property="backgroundImageView" destination="0Aq-1c-Gpa" id="wYf-oW-s7Y"/>
-                        <outlet property="facebookIconButton" destination="D3W-Ns-yVw" id="oxR-iE-68x"/>
-                        <outlet property="loginButton" destination="5xf-NI-C7u" id="1Oz-t6-M57"/>
+                        <outlet property="facebookIconButton" destination="5xf-NI-C7u" id="lUx-VO-xI7"/>
+                        <outlet property="loginButton" destination="D3W-Ns-yVw" id="kgL-aW-mnx"/>
                         <segue destination="WSu-fM-liS" kind="push" identifier="show_friends" id="T4U-SS-bkz"/>
                     </connections>
                 </viewController>

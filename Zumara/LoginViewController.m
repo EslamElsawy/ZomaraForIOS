@@ -7,6 +7,10 @@
 
 #define SHOW_FRIENDS_SEGUE @"show_friends"
 
+@interface LoginViewController ()
+@property (atomic) BOOL isLoggedIn;
+@end
+
 @implementation LoginViewController
 
 
@@ -22,7 +26,7 @@
     
     // Check if user is cached and linked to Facebook, if so, bypass login    
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-        [self showFriendsViewController];
+        [self loginSucceeded];
     }
 }
 
@@ -45,8 +49,20 @@
 }
 
 
+- (void)loginSucceeded {
+    self.isLoggedIn = YES;
+    self.loginButton.titleLabel.text = [NSString stringWithFormat:@"Signout, %@",[PFUser currentUser][FACEBOOK_NAME]];
+    [self updateUserDataOnParse];
+    [self showFriendsViewController];
+}
+
 /* Login to facebook method */
 - (IBAction)loginButtonTouchHandler:(id)sender  {
+    
+    if(self.isLoggedIn){
+        [self logout];
+        return;
+    }
     // Set permissions required from the facebook user account
     NSArray *permissionsArray = @[ @"user_about_me", @"user_location",@"user_friends"];
     
@@ -54,7 +70,6 @@
     
     self.facebookIconButton.enabled = NO;
     self.loginButton.enabled = NO;
-    //self.loginButton.titleLabel.text = @"Logout";
     [_activityIndicator startAnimating]; // Show loading indicator until login is finished
 
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
@@ -73,14 +88,25 @@
                 [alert show];
             }
         }else{
-            [self updateUserDataOnParse];
-            [self showFriendsViewController];
-
+            [self loginSucceeded];
         }
 
     }];
     
 }
+
+- (void) logout{
+    if (FBSession.activeSession.state == FBSessionStateOpen
+        || FBSession.activeSession.state == FBSessionStateOpenTokenExtended) {
+        
+        // Close the session and remove the access token from the cache
+        // The session state handler (in the app delegate) will be called automatically
+        [FBSession.activeSession closeAndClearTokenInformation];
+        self.isLoggedIn = NO;
+        self.loginButton.titleLabel.text = @"Sign in with Facebook";
+    }
+}
+
 
 
 - (void) updateUserDataOnParse{

@@ -41,6 +41,8 @@
 	<string>1.0</string>
 	<key>FacebookAppID</key>
 	<string>712917168767192</string>
+	<key>FacebookDisplayName</key>
+	<string>Zumora App</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchImages</key>
