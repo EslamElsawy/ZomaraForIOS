@@ -33,7 +33,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fbYOUR_FACEBOOK_APP_ID</string>
+				<string>zumara</string>
 			</array>
 		</dict>
 	</array>
@@ -42,7 +42,9 @@
 	<key>FacebookAppID</key>
 	<string>712917168767192</string>
 	<key>FacebookDisplayName</key>
-	<string>Zumora App</string>
+	<string>Zumara App</string>
+	<key>FacebookUrlSchemeSuffix</key>
+	<string>zumara</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchImages</key>
@@ -99,7 +101,5 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<true/>
 </dict>
 </plist>

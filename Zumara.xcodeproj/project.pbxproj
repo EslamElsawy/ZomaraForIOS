@@ -307,8 +307,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -328,7 +328,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "CB104B47-914C-41BE-9031-C7E21426B14F";
+				PROVISIONING_PROFILE = "AE57AE27-AAEE-48CF-ADCB-A4F806FAC67E";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -344,8 +344,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -358,7 +358,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "CB104B47-914C-41BE-9031-C7E21426B14F";
+				PROVISIONING_PROFILE = "AE57AE27-AAEE-48CF-ADCB-A4F806FAC67E";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -367,7 +367,7 @@
 		D4DA7A0314D3345A0055F672 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -380,7 +380,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Zumara;
-				PROVISIONING_PROFILE = "CB104B47-914C-41BE-9031-C7E21426B14F";
+				PROVISIONING_PROFILE = "AE57AE27-AAEE-48CF-ADCB-A4F806FAC67E";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -388,7 +388,7 @@
 		D4DA7A0414D3345A0055F672 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -401,7 +401,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Zumara;
-				PROVISIONING_PROFILE = "CB104B47-914C-41BE-9031-C7E21426B14F";
+				PROVISIONING_PROFILE = "AE57AE27-AAEE-48CF-ADCB-A4F806FAC67E";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
