@@ -103,6 +103,7 @@
                           @"الصلاة خير من النوم", @"alert",
                           @"Increment", @"badge",
                           @"fajr.caf", @"sound",                                                              @"alarm",@"type",
+                          @"com.badit.zomara.UPDATE_STATUS",@"action",
                           zumaraFriend[FACEBOOK_ID],@"fromId",
                           zumaraFriend[FACEBOOK_NAME],@"fromUser",
                           nil];
