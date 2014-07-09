@@ -23,7 +23,6 @@
     // Your Facebook application id is configured in Info.plist.
     // ****************************************************************************
     [PFFacebookUtils initializeFacebook];
-    NSLog(@"version %@",[FBSettings sdkVersion]);
 
     // Register for push notifications
     [application registerForRemoteNotificationTypes:

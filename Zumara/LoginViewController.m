@@ -16,6 +16,17 @@
 
 #pragma mark - UIViewController
 
+- (void)updateLanguageSegment {
+    NSArray *deviceLanguages = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
+    if([deviceLanguages count]){
+        if([[deviceLanguages objectAtIndex:0] isEqualToString:@"ar"]){
+            self.languageSegment.selectedSegmentIndex = 0;
+        }else{
+            self.languageSegment.selectedSegmentIndex = 1;
+        }
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
@@ -28,6 +39,8 @@
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self loginSucceeded];
     }
+    
+    [self updateLanguageSegment];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -51,7 +64,7 @@
 
 - (void)loginSucceeded {
     self.isLoggedIn = YES;
-    self.loginButton.titleLabel.text = [NSString stringWithFormat:@"Signout, %@",[PFUser currentUser][FACEBOOK_NAME]];
+    self.loginButton.titleLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Signout, %@",nil),[PFUser currentUser][FACEBOOK_NAME]];
     [self updateUserDataOnParse];
     [self showFriendsViewController];
 }
@@ -79,12 +92,11 @@
 
         if (!user) {
             if (!error) {
-                NSLog(@"Uh oh. The user cancelled the Facebook login.");
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:@"Uh oh. The user cancelled the Facebook login." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Log In Error",nil) message:NSLocalizedString(@"The Facebook login was cancelled by the user.",nil) delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"Dismiss",nil), nil];
                 [alert show];
             } else {
                 NSLog(@"Uh oh. An error occurred: %@", error);
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:@"Please check your internet connection" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Log In Error",nil) message:NSLocalizedString(@"Please check your internet connection",nil) delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"Dismiss",nil), nil];
                 [alert show];
             }
         }else{
@@ -103,7 +115,7 @@
         // The session state handler (in the app delegate) will be called automatically
         [FBSession.activeSession closeAndClearTokenInformation];
         self.isLoggedIn = NO;
-        self.loginButton.titleLabel.text = @"Sign in with Facebook";
+        self.loginButton.titleLabel.text = NSLocalizedString(@"Sign in with Facebook",nil);
     }
 }
 
@@ -135,7 +147,34 @@
         }
     }];
 }
-     
 
+
+- (IBAction)languageSegmentAction:(id)sender{
+
+    NSString * alertMessage = [NSString stringWithFormat:NSLocalizedString(@"Change Language Warning Message", @""),NSLocalizedString(@"New Language", @"")];
+    UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Change Language Dialog Title", @"") message:alertMessage
+                                                       delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", @"") otherButtonTitles:NSLocalizedString(@"OK", @"") ,nil];
+    [alertView show];
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(buttonIndex == 1){//OK
+        if(self.languageSegment.selectedSegmentIndex == 0){
+            [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"ar", nil] forKey:@"AppleLanguages"];
+        }else{
+            [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"eg", nil] forKey:@"AppleLanguages"];
+        }
+        [[NSUserDefaults standardUserDefaults]synchronize];
+        exit(0);
+    }else{
+        [self updateLanguageSegment];
+    }
+}
+
+
+-(IBAction)goToBadrIT:(id)sender{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.badrit.com"]];
+}
 
 @end

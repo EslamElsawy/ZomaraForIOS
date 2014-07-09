@@ -8,6 +8,7 @@
 
 #import "FriendsTableViewController.h"
 #import <Parse/Parse.h>
+#define MAX_USER_NAME 15
 
 @implementation FriendsTableViewController
 
@@ -40,7 +41,7 @@
 
         if (error) {
             NSLog(@"Uh oh. An error occurred: %@", error);
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch User Data Error" message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Loadings Friends",nil) message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"Dismiss",nil), nil];
             [alert show];
             [self.refreshControl endRefreshing];
         }else{
@@ -51,7 +52,7 @@
                     [self filterAwakenFriends:data];
                 }else{
                     NSLog(@"Uh oh. An error occurred: %@", error);
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetch Friends Error" message:@"Try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Loadings Friends",nil) message:NSLocalizedString(@"Try again later",nil) delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"Dismiss",nil), nil];
                     [alert show];
                     [self.refreshControl endRefreshing];
                 }
@@ -92,20 +93,27 @@
 
     NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
     PFUser * zumaraFriend = self.friends[indexPath.row];
-    NSString * name = zumaraFriend[FACEBOOK_NAME];
-    NSLog(@"wake %@",name);
     
     // Create our Installation query
     PFQuery *pushQuery = [PFInstallation query];
     [pushQuery whereKey:FACEBOOK_ID equalTo:zumaraFriend[FACEBOOK_ID]];
     
+    NSString * senderName =  [PFUser currentUser][FACEBOOK_NAME];
+    if(senderName.length > MAX_USER_NAME){    //trim user name so it can fit in iOS push notification
+        senderName = [senderName substringToIndex:senderName.length-(senderName.length-MAX_USER_NAME)];
+    }
+    
+    NSString * senderID =  [PFUser currentUser][FACEBOOK_ID];
+    NSString * alertMessage = [NSString stringWithFormat:NSLocalizedString(@"Prayer is better than sleep",nil),senderName];
+
     NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
-                          @"الصلاة خير من النوم", @"alert",
+                          alertMessage, @"alert",
                           @"Increment", @"badge",
-                          @"fajr.caf", @"sound",                                                              @"alarm",@"type",
+                          @"fajr.caf", @"sound",
+                          @"alarm",@"type",
                           @"com.badit.zomara.UPDATE_STATUS",@"action",
-                          zumaraFriend[FACEBOOK_ID],@"fromId",
-                          zumaraFriend[FACEBOOK_NAME],@"fromUser",
+                          senderID,@"fromId",
+                          senderName,@"fromUser",
                           nil];
     PFPush *push = [[PFPush alloc] init];
     [push setQuery:pushQuery];

@@ -28,7 +28,8 @@
 		52B5AE001969AB93000522F6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF61969AB93000522F6 /* Default@2x.png */; };
 		52B5AE011969AB93000522F6 /* facebook_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF71969AB93000522F6 /* facebook_icon@2x.png */; };
 		52B5AE021969AB93000522F6 /* AppStoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF81969AB93000522F6 /* AppStoreIcon.png */; };
-		52B5AE041969B181000522F6 /* awake_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5AE031969B181000522F6 /* awake_icon.png */; };
+		52B9D693196C479E00F414AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52B9D695196C479E00F414AF /* Localizable.strings */; };
+		52B9D69A196D6CB400F414AF /* awake_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B9D699196D6CB400F414AF /* awake_icon@2x.png */; };
 		6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D10F48216DD68E000690A0F /* CoreLocation.framework */; };
 		C425016D161BBAE400474BCD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4250169161BBAE400474BCD /* StoreKit.framework */; };
 		C4250170161BBAEE00474BCD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C425016F161BBAEE00474BCD /* libz.dylib */; };
@@ -71,7 +72,11 @@
 		52B5ADF61969AB93000522F6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		52B5ADF71969AB93000522F6 /* facebook_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_icon@2x.png"; sourceTree = "<group>"; };
 		52B5ADF81969AB93000522F6 /* AppStoreIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppStoreIcon.png; sourceTree = "<group>"; };
-		52B5AE031969B181000522F6 /* awake_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awake_icon.png; sourceTree = "<group>"; };
+		52B9D691196C475B00F414AF /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		52B9D692196C475B00F414AF /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ar; path = ar.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		52B9D694196C479E00F414AF /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		52B9D696196C47A300F414AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		52B9D699196D6CB400F414AF /* awake_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "awake_icon@2x.png"; sourceTree = "<group>"; };
 		6D10F48216DD68E000690A0F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C4250169161BBAE400474BCD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C425016F161BBAEE00474BCD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -115,17 +120,18 @@
 		5289DD0D1969A26700A4B8FA /* Zumara */ = {
 			isa = PBXGroup;
 			children = (
+				5289DD101969A26700A4B8FA /* Constants.h */,
 				5289DD0E1969A26700A4B8FA /* AppDelegate.h */,
 				5289DD0F1969A26700A4B8FA /* AppDelegate.m */,
 				5289DD231969A26700A4B8FA /* LoginViewController.h */,
 				5289DD241969A26700A4B8FA /* LoginViewController.m */,
-				5289DD101969A26700A4B8FA /* Constants.h */,
-				5289DD111969A26700A4B8FA /* InfoPlist.strings */,
-				5289DD131969A26700A4B8FA /* Storyboard.storyboard */,
 				5289DD151969A26700A4B8FA /* FriendCell.h */,
 				5289DD161969A26700A4B8FA /* FriendCell.m */,
 				5289DD171969A26700A4B8FA /* FriendsTableViewController.h */,
 				5289DD181969A26700A4B8FA /* FriendsTableViewController.m */,
+				52B9D695196C479E00F414AF /* Localizable.strings */,
+				5289DD111969A26700A4B8FA /* InfoPlist.strings */,
+				5289DD131969A26700A4B8FA /* Storyboard.storyboard */,
 				5289DD191969A26700A4B8FA /* Graphics */,
 				5289DD251969A26700A4B8FA /* main.m */,
 				5289DD261969A26700A4B8FA /* Zumara-Info.plist */,
@@ -138,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				52B5ADEF1969AB93000522F6 /* Icon@2x.png */,
-				52B5AE031969B181000522F6 /* awake_icon.png */,
+				52B9D699196D6CB400F414AF /* awake_icon@2x.png */,
 				52B5ADF01969AB93000522F6 /* sign_button@2x.png */,
 				52B5ADF11969AB93000522F6 /* alarm_icon@2x.png */,
 				52B5ADF21969AB93000522F6 /* background-568h@2x.png */,
@@ -225,6 +231,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ar,
 			);
 			mainGroup = D4DA79DF14D3345A0055F672;
 			productRefGroup = D4DA79EB14D3345A0055F672 /* Products */;
@@ -248,14 +255,15 @@
 				5289DD391969A26700A4B8FA /* Zumara-Info.plist in Resources */,
 				5289DD2B1969A26700A4B8FA /* Storyboard.storyboard in Resources */,
 				52B5ADFC1969AB93000522F6 /* background-568h@2x.png in Resources */,
-				52B5AE041969B181000522F6 /* awake_icon.png in Resources */,
 				52B5ADFA1969AB93000522F6 /* sign_button@2x.png in Resources */,
 				52B5AE011969AB93000522F6 /* facebook_icon@2x.png in Resources */,
 				52B5ADFB1969AB93000522F6 /* alarm_icon@2x.png in Resources */,
 				5289DD3A1969A26700A4B8FA /* fajr.caf in Resources */,
 				52B5ADFD1969AB93000522F6 /* background@2x.png in Resources */,
+				52B9D693196C479E00F414AF /* Localizable.strings in Resources */,
 				52B5ADFE1969AB93000522F6 /* contact_bg@2x.png in Resources */,
 				52B5ADF91969AB93000522F6 /* Icon@2x.png in Resources */,
+				52B9D69A196D6CB400F414AF /* awake_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +289,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5289DD121969A26700A4B8FA /* en */,
+				52B9D691196C475B00F414AF /* ar */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -289,8 +298,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				5289DD141969A26700A4B8FA /* en */,
+				52B9D692196C475B00F414AF /* ar */,
 			);
 			name = Storyboard.storyboard;
+			sourceTree = "<group>";
+		};
+		52B9D695196C479E00F414AF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B9D694196C479E00F414AF /* ar */,
+				52B9D696196C47A300F414AF /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -307,8 +326,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -328,7 +347,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "AE57AE27-AAEE-48CF-ADCB-A4F806FAC67E";
+				PROVISIONING_PROFILE = "E51781D7-6655-497D-B52F-B1F9C17C81ED";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -344,8 +363,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -358,7 +377,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "AE57AE27-AAEE-48CF-ADCB-A4F806FAC67E";
+				PROVISIONING_PROFILE = "E51781D7-6655-497D-B52F-B1F9C17C81ED";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -367,7 +386,7 @@
 		D4DA7A0314D3345A0055F672 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -380,7 +399,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Zumara;
-				PROVISIONING_PROFILE = "AE57AE27-AAEE-48CF-ADCB-A4F806FAC67E";
+				PROVISIONING_PROFILE = "E51781D7-6655-497D-B52F-B1F9C17C81ED";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -388,7 +407,7 @@
 		D4DA7A0414D3345A0055F672 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Badr for Information Technology, LLC (MDBBH5S24M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Muhammad Nasr (JUAK6XJCUF)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -401,7 +420,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Zumara;
-				PROVISIONING_PROFILE = "AE57AE27-AAEE-48CF-ADCB-A4F806FAC67E";
+				PROVISIONING_PROFILE = "E51781D7-6655-497D-B52F-B1F9C17C81ED";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
