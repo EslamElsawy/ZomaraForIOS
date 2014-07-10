@@ -7,25 +7,11 @@
 
 #define SHOW_FRIENDS_SEGUE @"show_friends"
 
-@interface LoginViewController ()
-@property (atomic) BOOL isLoggedIn;
-@end
-
 @implementation LoginViewController
 
 
 #pragma mark - UIViewController
 
-- (void)updateLanguageSegment {
-    NSArray *deviceLanguages = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
-    if([deviceLanguages count]){
-        if([[deviceLanguages objectAtIndex:0] isEqualToString:@"ar"]){
-            self.languageSegment.selectedSegmentIndex = 0;
-        }else{
-            self.languageSegment.selectedSegmentIndex = 1;
-        }
-    }
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,7 +26,6 @@
         [self loginSucceeded];
     }
     
-    [self updateLanguageSegment];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -56,26 +41,18 @@
 #pragma mark - Login mehtods
 
 - (void)showFriendsViewController {
-
     [self performSegueWithIdentifier:SHOW_FRIENDS_SEGUE sender:self];
-
 }
 
 
 - (void)loginSucceeded {
-    self.isLoggedIn = YES;
-    self.loginButton.titleLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Signout, %@",nil),[PFUser currentUser][FACEBOOK_NAME]];
     [self updateUserDataOnParse];
     [self showFriendsViewController];
 }
 
 /* Login to facebook method */
-- (IBAction)loginButtonTouchHandler:(id)sender  {
-    
-    if(self.isLoggedIn){
-        [self logout];
-        return;
-    }
+- (IBAction)loginButtonAction:(id)sender  {
+ 
     // Set permissions required from the facebook user account
     NSArray *permissionsArray = @[ @"user_about_me", @"user_location",@"user_friends"];
     
@@ -107,19 +84,6 @@
     
 }
 
-- (void) logout{
-    if (FBSession.activeSession.state == FBSessionStateOpen
-        || FBSession.activeSession.state == FBSessionStateOpenTokenExtended) {
-        
-        // Close the session and remove the access token from the cache
-        // The session state handler (in the app delegate) will be called automatically
-        [FBSession.activeSession closeAndClearTokenInformation];
-        self.isLoggedIn = NO;
-        self.loginButton.titleLabel.text = NSLocalizedString(@"Sign in with Facebook",nil);
-    }
-}
-
-
 
 - (void) updateUserDataOnParse{
     // Send request to Facebook
@@ -146,35 +110,6 @@
             NSLog(@"Error update user data on parse %@",[error description]);
         }
     }];
-}
-
-
-- (IBAction)languageSegmentAction:(id)sender{
-
-    NSString * alertMessage = [NSString stringWithFormat:NSLocalizedString(@"Change Language Warning Message", @""),NSLocalizedString(@"New Language", @"")];
-    UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Change Language Dialog Title", @"") message:alertMessage
-                                                       delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", @"") otherButtonTitles:NSLocalizedString(@"OK", @"") ,nil];
-    [alertView show];
-}
-
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(buttonIndex == 1){//OK
-        if(self.languageSegment.selectedSegmentIndex == 0){
-            [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"ar", nil] forKey:@"AppleLanguages"];
-        }else{
-            [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"eg", nil] forKey:@"AppleLanguages"];
-        }
-        [[NSUserDefaults standardUserDefaults]synchronize];
-        exit(0);
-    }else{
-        [self updateLanguageSegment];
-    }
-}
-
-
--(IBAction)goToBadrIT:(id)sender{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.badrit.com"]];
 }
 
 @end

@@ -49,7 +49,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonTouchHandler:" destination="pOG-Q7-3rY" eventType="touchUpInside" id="1vu-Z0-3CE"/>
+                                    <action selector="loginButtonAction:" destination="pOG-Q7-3rY" eventType="touchUpInside" id="ixN-kH-Uws"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5xf-NI-C7u">
@@ -65,25 +65,24 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonTouchHandler:" destination="pOG-Q7-3rY" eventType="touchUpInside" id="MNm-KI-754"/>
+                                    <action selector="loginButtonAction:" destination="pOG-Q7-3rY" eventType="touchUpInside" id="UbR-Ki-Y5v"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="mAm-48-Cda" userLabel="LangaugeSegment">
-                                <rect key="frame" x="96" y="520" width="128" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                <segments>
-                                    <segment title="عربى"/>
-                                    <segment title="English"/>
-                                </segments>
-                                <connections>
-                                    <action selector="languageSegmentAction:" destination="pOG-Q7-3rY" eventType="valueChanged" id="ddw-Gj-1RW"/>
-                                </connections>
-                            </segmentedControl>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="lXN-7A-Bxx">
                                 <rect key="frame" x="274" y="449" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="xt6-cJ-8rd" userLabel="About Button">
+                                <rect key="frame" x="278" y="526" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OIf-X4-F8J" kind="push" id="VOy-du-FTR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -93,7 +92,6 @@
                         <outlet property="activityIndicator" destination="lXN-7A-Bxx" id="3MG-1D-zsJ"/>
                         <outlet property="backgroundImageView" destination="0Aq-1c-Gpa" id="wYf-oW-s7Y"/>
                         <outlet property="facebookIconButton" destination="5xf-NI-C7u" id="lUx-VO-xI7"/>
-                        <outlet property="languageSegment" destination="mAm-48-Cda" id="3Nk-33-gdg"/>
                         <outlet property="loginButton" destination="D3W-Ns-yVw" id="kgL-aW-mnx"/>
                         <segue destination="WSu-fM-liS" kind="push" identifier="show_friends" id="T4U-SS-bkz"/>
                     </connections>
@@ -179,11 +177,82 @@ EE11aGFtbWFkIEhhc3NhbiBOYXNyIEVsZGluA
             </objects>
             <point key="canvasLocation" x="645" y="-80"/>
         </scene>
+        <!--About View Controller - عن التطبيق أي.قظنى-->
+        <scene sceneID="Ij4-Bd-NKc">
+            <objects>
+                <viewController id="OIf-X4-F8J" customClass="AboutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y4n-e9-0lX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" id="OWV-X2-I2Z">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="tailTruncation" id="B69-sL-APz">
+                                <rect key="frame" x="82" y="266" width="165" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="17" maxY="0.0"/>
+                                <state key="normal" title="تسجيل الخروج" backgroundImage="sign_button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonAction:" destination="OIf-X4-F8J" eventType="touchUpInside" id="tHN-9q-wRb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xoh-yy-57C">
+                                <rect key="frame" x="20" y="252" width="62" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" backgroundImage="facebook_icon.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonAction:" destination="OIf-X4-F8J" eventType="touchUpInside" id="jZA-l5-g9J"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="ZKm-QT-czZ" userLabel="LangaugeSegment">
+                                <rect key="frame" x="95" y="200" width="128" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <segments>
+                                    <segment title="عربى"/>
+                                    <segment title="English"/>
+                                </segments>
+                                <connections>
+                                    <action selector="languageSegmentAction:" destination="OIf-X4-F8J" eventType="valueChanged" id="Dap-I5-r1l"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="عن التطبيق أي.قظنى" id="F7f-CG-LW9"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="OWV-X2-I2Z" id="6Hs-TE-SGM"/>
+                        <outlet property="languageSegment" destination="ZKm-QT-czZ" id="ktX-bg-OHg"/>
+                        <outlet property="logoutButton" destination="B69-sL-APz" id="IB8-nf-GMh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BL3-bd-un2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="690" y="861"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Default.png" width="320" height="480"/>
         <image name="alarm_icon.png" width="63" height="63"/>
         <image name="awake_icon.png" width="55" height="55"/>
+        <image name="background.png" width="320" height="480"/>
         <image name="contact_bg.png" width="78" height="78"/>
         <image name="facebook_icon.png" width="62" height="62"/>
         <image name="sign_button.png" width="166" height="35"/>

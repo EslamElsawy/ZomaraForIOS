@@ -30,6 +30,13 @@
 		52B5AE021969AB93000522F6 /* AppStoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B5ADF81969AB93000522F6 /* AppStoreIcon.png */; };
 		52B9D693196C479E00F414AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52B9D695196C479E00F414AF /* Localizable.strings */; };
 		52B9D69A196D6CB400F414AF /* awake_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B9D699196D6CB400F414AF /* awake_icon@2x.png */; };
+		52B9D69D196DA70200F414AF /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B9D69C196DA70200F414AF /* AboutViewController.m */; };
+		52B9D6A0196EB14700F414AF /* Icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B9D69E196EB14700F414AF /* Icon58.png */; };
+		52B9D6A1196EB14700F414AF /* Icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B9D69F196EB14700F414AF /* Icon80.png */; };
+		52B9D6A4196EB5FD00F414AF /* about_facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B9D6A2196EB5FD00F414AF /* about_facebook@2x.png */; };
+		52B9D6A5196EB5FD00F414AF /* about_mail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B9D6A3196EB5FD00F414AF /* about_mail@2x.png */; };
+		52B9D6A7196EEC0A00F414AF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B9D6A6196EEC0A00F414AF /* MessageUI.framework */; };
+		52B9D6A9196EEEA400F414AF /* about_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B9D6A8196EEEA400F414AF /* about_close@2x.png */; };
 		6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D10F48216DD68E000690A0F /* CoreLocation.framework */; };
 		C425016D161BBAE400474BCD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4250169161BBAE400474BCD /* StoreKit.framework */; };
 		C4250170161BBAEE00474BCD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C425016F161BBAEE00474BCD /* libz.dylib */; };
@@ -77,6 +84,14 @@
 		52B9D694196C479E00F414AF /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52B9D696196C47A300F414AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52B9D699196D6CB400F414AF /* awake_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "awake_icon@2x.png"; sourceTree = "<group>"; };
+		52B9D69B196DA70200F414AF /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		52B9D69C196DA70200F414AF /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		52B9D69E196EB14700F414AF /* Icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon58.png; sourceTree = "<group>"; };
+		52B9D69F196EB14700F414AF /* Icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon80.png; sourceTree = "<group>"; };
+		52B9D6A2196EB5FD00F414AF /* about_facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_facebook@2x.png"; sourceTree = "<group>"; };
+		52B9D6A3196EB5FD00F414AF /* about_mail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_mail@2x.png"; sourceTree = "<group>"; };
+		52B9D6A6196EEC0A00F414AF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		52B9D6A8196EEEA400F414AF /* about_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_close@2x.png"; sourceTree = "<group>"; };
 		6D10F48216DD68E000690A0F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C4250169161BBAE400474BCD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C425016F161BBAEE00474BCD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -97,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B9D6A7196EEC0A00F414AF /* MessageUI.framework in Frameworks */,
 				C425016D161BBAE400474BCD /* StoreKit.framework in Frameworks */,
 				6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */,
 				C4250170161BBAEE00474BCD /* libz.dylib in Frameworks */,
@@ -125,6 +141,8 @@
 				5289DD0F1969A26700A4B8FA /* AppDelegate.m */,
 				5289DD231969A26700A4B8FA /* LoginViewController.h */,
 				5289DD241969A26700A4B8FA /* LoginViewController.m */,
+				52B9D69B196DA70200F414AF /* AboutViewController.h */,
+				52B9D69C196DA70200F414AF /* AboutViewController.m */,
 				5289DD151969A26700A4B8FA /* FriendCell.h */,
 				5289DD161969A26700A4B8FA /* FriendCell.m */,
 				5289DD171969A26700A4B8FA /* FriendsTableViewController.h */,
@@ -144,6 +162,11 @@
 			isa = PBXGroup;
 			children = (
 				52B5ADEF1969AB93000522F6 /* Icon@2x.png */,
+				52B9D6A8196EEEA400F414AF /* about_close@2x.png */,
+				52B9D6A2196EB5FD00F414AF /* about_facebook@2x.png */,
+				52B9D6A3196EB5FD00F414AF /* about_mail@2x.png */,
+				52B9D69E196EB14700F414AF /* Icon58.png */,
+				52B9D69F196EB14700F414AF /* Icon80.png */,
 				52B9D699196D6CB400F414AF /* awake_icon@2x.png */,
 				52B5ADF01969AB93000522F6 /* sign_button@2x.png */,
 				52B5ADF11969AB93000522F6 /* alarm_icon@2x.png */,
@@ -179,6 +202,7 @@
 		D4DA79ED14D3345A0055F672 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52B9D6A6196EEC0A00F414AF /* MessageUI.framework */,
 				30C949AD1829561800B17666 /* Parse.framework */,
 				30C949AB1829561000B17666 /* FacebookSDK.framework */,
 				6D10F48216DD68E000690A0F /* CoreLocation.framework */,
@@ -253,13 +277,18 @@
 				52B5AE021969AB93000522F6 /* AppStoreIcon.png in Resources */,
 				52B5ADFF1969AB93000522F6 /* Default-568h@2x.png in Resources */,
 				5289DD391969A26700A4B8FA /* Zumara-Info.plist in Resources */,
+				52B9D6A4196EB5FD00F414AF /* about_facebook@2x.png in Resources */,
 				5289DD2B1969A26700A4B8FA /* Storyboard.storyboard in Resources */,
+				52B9D6A5196EB5FD00F414AF /* about_mail@2x.png in Resources */,
 				52B5ADFC1969AB93000522F6 /* background-568h@2x.png in Resources */,
 				52B5ADFA1969AB93000522F6 /* sign_button@2x.png in Resources */,
 				52B5AE011969AB93000522F6 /* facebook_icon@2x.png in Resources */,
 				52B5ADFB1969AB93000522F6 /* alarm_icon@2x.png in Resources */,
 				5289DD3A1969A26700A4B8FA /* fajr.caf in Resources */,
+				52B9D6A0196EB14700F414AF /* Icon58.png in Resources */,
+				52B9D6A1196EB14700F414AF /* Icon80.png in Resources */,
 				52B5ADFD1969AB93000522F6 /* background@2x.png in Resources */,
+				52B9D6A9196EEEA400F414AF /* about_close@2x.png in Resources */,
 				52B9D693196C479E00F414AF /* Localizable.strings in Resources */,
 				52B5ADFE1969AB93000522F6 /* contact_bg@2x.png in Resources */,
 				52B5ADF91969AB93000522F6 /* Icon@2x.png in Resources */,
@@ -274,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B9D69D196DA70200F414AF /* AboutViewController.m in Sources */,
 				5289DD381969A26700A4B8FA /* main.m in Sources */,
 				5289DD371969A26700A4B8FA /* LoginViewController.m in Sources */,
 				5289DD2D1969A26700A4B8FA /* FriendsTableViewController.m in Sources */,

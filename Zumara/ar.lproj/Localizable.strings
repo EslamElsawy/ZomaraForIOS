@@ -8,9 +8,9 @@
 
 "Prayer is better than sleep" = "%@...\n الصلاة خير من النوم \n Prayer is better than sleep";
 
-"Sign in with Facebook" = "تسجيل الدخول بالفيسبوك";
+"Log In with Facebook" = "تسجيل الدخول بالفيسبوك";
 
-"Signout, %@" = "خروج: %@";
+"Log Out, %@" = "خروج: %@";
 
 "The Facebook login was cancelled by the user." = "تم إلغاء تسجيل الدخول بالفيسبوك عن طريق المستخدم";
 

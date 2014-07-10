@@ -10,12 +10,10 @@
 
 @property (nonatomic, strong) IBOutlet UIButton *facebookIconButton;
 @property (nonatomic, strong) IBOutlet UIButton *loginButton;
-@property (strong,nonatomic) IBOutlet UISegmentedControl *languageSegment;
 
 @property (nonatomic, strong) IBOutlet UIImageView *backgroundImageView;
 
 
-- (IBAction)loginButtonTouchHandler:(id)sender;
-- (IBAction)languageSegmentAction:(id)sender;
+- (IBAction)loginButtonAction:(id)sender;
 
 @end

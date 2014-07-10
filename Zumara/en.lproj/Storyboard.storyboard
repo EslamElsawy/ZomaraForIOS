@@ -36,12 +36,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="tailTruncation" id="D3W-Ns-yVw">
-                                <rect key="frame" x="99" y="467" width="165" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="tailTruncation" id="uPO-21-oi7">
+                                <rect key="frame" x="102" y="479" width="166" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <inset key="contentEdgeInsets" minX="17" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Sign in with Facebook" backgroundImage="sign_button.png">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="13" maxY="0.0"/>
+                                <state key="normal" title="Log In with Facebook" backgroundImage="sign_button.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,11 +49,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonTouchHandler:" destination="pOG-Q7-3rY" eventType="touchUpInside" id="1vu-Z0-3CE"/>
+                                    <action selector="loginButtonAction:" destination="pOG-Q7-3rY" eventType="touchUpInside" id="muq-Dg-AAj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5xf-NI-C7u">
-                                <rect key="frame" x="38" y="454" width="62" height="62"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="Dpz-NE-4xE">
+                                <rect key="frame" x="274" y="479" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CIN-Yc-mOC">
+                                <rect key="frame" x="41" y="466" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <inset key="contentEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -65,25 +70,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonTouchHandler:" destination="pOG-Q7-3rY" eventType="touchUpInside" id="MNm-KI-754"/>
+                                    <action selector="loginButtonAction:" destination="pOG-Q7-3rY" eventType="touchUpInside" id="sCf-Vx-URC"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="BRx-2W-7d8" userLabel="LangaugeSegment">
-                                <rect key="frame" x="96" y="520" width="128" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                <segments>
-                                    <segment title="عربى"/>
-                                    <segment title="English"/>
-                                </segments>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="uxj-RT-hdx" userLabel="About button">
+                                <rect key="frame" x="281" y="43" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="languageSegmentAction:" destination="pOG-Q7-3rY" eventType="valueChanged" id="CEJ-vs-q6Y"/>
+                                    <segue destination="lPT-kW-DE0" kind="modal" id="vsh-T7-IjB"/>
                                 </connections>
-                            </segmentedControl>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="lXN-7A-Bxx">
-                                <rect key="frame" x="271" y="466" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -92,17 +91,16 @@
                     </navigationItem>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="lXN-7A-Bxx" id="3MG-1D-zsJ"/>
+                        <outlet property="activityIndicator" destination="Dpz-NE-4xE" id="gPV-CP-5cv"/>
                         <outlet property="backgroundImageView" destination="0Aq-1c-Gpa" id="wYf-oW-s7Y"/>
-                        <outlet property="facebookIconButton" destination="5xf-NI-C7u" id="lUx-VO-xI7"/>
-                        <outlet property="languageSegment" destination="BRx-2W-7d8" id="oaH-AD-aEV"/>
-                        <outlet property="loginButton" destination="D3W-Ns-yVw" id="kgL-aW-mnx"/>
+                        <outlet property="facebookIconButton" destination="CIN-Yc-mOC" id="fV9-Ox-QIm"/>
+                        <outlet property="loginButton" destination="uPO-21-oi7" id="mzd-Ii-PUd"/>
                         <segue destination="WSu-fM-liS" kind="push" identifier="show_friends" id="T4U-SS-bkz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOA-eB-7Tm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="-59"/>
+            <point key="canvasLocation" x="110" y="-69"/>
         </scene>
         <!--Friends Table View Controller - Wake your friends up!-->
         <scene sceneID="zIS-69-1YJ">
@@ -181,11 +179,156 @@ EE11aGFtbWFkIEhhc3NhbiBOYXNyIEVsZGluA
             </objects>
             <point key="canvasLocation" x="645" y="-80"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="li3-wS-emc">
+            <objects>
+                <viewController id="lPT-kW-DE0" customClass="AboutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XGy-c1-N8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" id="isK-Gg-rAt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="tailTruncation" id="D3W-Ns-yVw">
+                                <rect key="frame" x="109" y="502" width="165" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="contentEdgeInsets" minX="9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Log Out from Facebook" backgroundImage="sign_button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonAction:" destination="lPT-kW-DE0" eventType="touchUpInside" id="Zv0-J9-1Ni"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5xf-NI-C7u" userLabel="Facebook Icon">
+                                <rect key="frame" x="47" y="488" width="62" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" backgroundImage="facebook_icon.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonAction:" destination="lPT-kW-DE0" eventType="touchUpInside" id="cBZ-9a-OFR"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="BRx-2W-7d8" userLabel="LangaugeSegment">
+                                <rect key="frame" x="146" y="453" width="128" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <segments>
+                                    <segment title="عربى"/>
+                                    <segment title="English"/>
+                                </segments>
+                                <connections>
+                                    <action selector="languageSegmentAction:" destination="lPT-kW-DE0" eventType="valueChanged" id="9VO-2x-oJu"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LKf-ZL-Did" userLabel="Facebook Button">
+                                <rect key="frame" x="156" y="390" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="about_facebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookButtonAction:" destination="lPT-kW-DE0" eventType="touchUpInside" id="y13-UC-6Rq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="y3s-QU-NEe" userLabel="Mail Button">
+                                <rect key="frame" x="224" y="390" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="about_mail.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="emailButtonAction:" destination="lPT-kW-DE0" eventType="touchUpInside" id="xBI-VJ-JOe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Langauge:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q45-P8-lBr">
+                                <rect key="frame" x="36" y="453" width="112" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact us:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5lY-B5-HKR">
+                                <rect key="frame" x="36" y="401" width="112" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uHy-Fd-c1c" userLabel="Close Button">
+                                <rect key="frame" x="265" y="20" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="about_close.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonAction:" destination="lPT-kW-DE0" eventType="touchUpInside" id="05d-4I-DL1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ِAbout iQezny" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gOk-G8-smh">
+                                <rect key="frame" x="97" y="24" width="126" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="AOZ-AX-Lkh">
+                                <rect key="frame" x="36" y="53" width="240" height="334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">iQezny is a social app that lets you wake your friends up for Fajr prayer.
+
+Just make sure your friends install the app on their device (iPhone or Android), then when it is Fajr time, open the app, and login with Facebook and press the wake button.
+
+Then start sending Alarms to your friends.
+
+Idea: Eslam Ashraf
+Programming: Muhammad Hassan
+Graphics: Ahmed Ali</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awake_icon.png" id="309-mB-PRJ">
+                                <rect key="frame" x="211" y="167" width="38" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="isK-Gg-rAt" id="5Kw-Km-CQM"/>
+                        <outlet property="languageSegment" destination="BRx-2W-7d8" id="mRi-dl-yPo"/>
+                        <outlet property="logoutButton" destination="D3W-Ns-yVw" id="r1Z-Sh-r3p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FKT-oQ-JgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="690" y="861"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Default.png" width="320" height="480"/>
+        <image name="about_close.png" width="78" height="78"/>
+        <image name="about_facebook.png" width="78" height="78"/>
+        <image name="about_mail.png" width="78" height="78"/>
         <image name="alarm_icon.png" width="63" height="63"/>
         <image name="awake_icon.png" width="55" height="55"/>
+        <image name="background.png" width="320" height="480"/>
         <image name="contact_bg.png" width="78" height="78"/>
         <image name="facebook_icon.png" width="62" height="62"/>
         <image name="sign_button.png" width="166" height="35"/>
