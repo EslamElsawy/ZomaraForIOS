@@ -1,6 +1,6 @@
 //
 //  AboutViewController.h
-//  Zumara
+//  iQezny
 //
 //  Created by Muhammad Hassan Nasr on 7/9/14.
 //

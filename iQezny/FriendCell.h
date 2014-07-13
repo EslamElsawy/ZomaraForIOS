@@ -1,6 +1,6 @@
 //
 //  FriendCell.h
-//  Zumara
+//  iQezny
 //
 //  Created by Muhammad Hassan Nasr on 6/25/14.
 //
@@ -24,7 +24,7 @@
 
 @property(weak,nonatomic)  IBOutlet id<FriendCellDelegate> delegate;
 
-@property(strong) PFUser * zumaraFriend ;
+@property(strong) PFUser * friend;
 
 -  (IBAction) alarmButtonTouched;
 

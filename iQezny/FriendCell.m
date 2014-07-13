@@ -1,6 +1,6 @@
 //
 //  FriendCell.m
-//  Zumara
+//  iQezny
 //
 //  Created by Muhammad Hassan Nasr on 6/25/14.
 //
@@ -25,8 +25,8 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
 
-    self.nameLabel.text = self.zumaraFriend[FACEBOOK_NAME];
-    self.profilePictureView.profileID = self.zumaraFriend[FACEBOOK_ID];
+    self.nameLabel.text = self.friend[FACEBOOK_NAME];
+    self.profilePictureView.profileID = self.friend[FACEBOOK_ID];
     self.profilePictureView.layer.cornerRadius = 38;
 }
 

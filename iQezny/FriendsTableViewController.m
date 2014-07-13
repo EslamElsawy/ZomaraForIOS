@@ -1,6 +1,6 @@
 //
 //  FriendsTableViewController.m
-//  Zumara
+//  iQezny
 //
 //  Created by Muhammad Hassan Nasr on 6/10/14.
 //
@@ -83,7 +83,7 @@
     FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FRIEND_CELL_ID" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.zumaraFriend = self.friends[indexPath.row];
+    cell.friend = self.friends[indexPath.row];
    
     return cell;
 }
@@ -92,11 +92,11 @@
 - (void) alarmButtonTouchedOnCell:(UITableViewCell*) cell{
 
     NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
-    PFUser * zumaraFriend = self.friends[indexPath.row];
+    PFUser * friend = self.friends[indexPath.row];
     
     // Create our Installation query
     PFQuery *pushQuery = [PFInstallation query];
-    [pushQuery whereKey:FACEBOOK_ID equalTo:zumaraFriend[FACEBOOK_ID]];
+    [pushQuery whereKey:FACEBOOK_ID equalTo:friend[FACEBOOK_ID]];
     
     NSString * senderName =  [PFUser currentUser][FACEBOOK_NAME];
     if(senderName.length > MAX_USER_NAME){    //trim user name so it can fit in iOS push notification
